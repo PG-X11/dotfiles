@@ -1,0 +1,76 @@
+# =========================
+# BASIC
+# =========================
+export PATH="$HOME/.local/bin:$PATH"
+autoload -Uz colors && colors
+
+# History
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.zsh_history
+
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+setopt AUTO_CD
+setopt CORRECT
+
+# =========================
+# STARSHIP PROMPT
+# =========================
+
+eval "$(starship init zsh)"
+
+# =========================
+# PLUGINS
+# =========================
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# =========================
+# ALIASES
+# =========================
+
+alias ls='ls --color=auto'
+alias ll='ls -lah'
+alias la='ls -A'
+alias cls='clear'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias update='sudo pacman -Syu'
+alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
+alias c='clear'
+alias fastfetch='fastfetch'
+alias yay='paru'
+
+#==========================
+# TERMINAL GOODIES
+# =========================
+
+fastfetch --config arch
+# =========================
+# ENVIRONMENT
+# =========================
+
+export EDITOR=kate
+export TERMINAL=kitty
+export QT_QPA_PLATFORMTHEME=qt6ct
+export NVIDIA_DRIVER_CAPABILITIES=all
+export __GL_SHADER_DISK_CACHE=1
+export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+# =========================
+# COMPLETIONS
+# =========================
+
+autoload -Uz compinit
+compinit
+
+# Force explicit matching using the full escape string syntax
+bindkey -r "^[[1;5D"
+bindkey -r "^[[1;5C"
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+

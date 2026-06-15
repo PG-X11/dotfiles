@@ -1,0 +1,8 @@
+cattpuccn-mocha :
+everforest : "oomox-everforest-Dark"
+dracula : "Tela drakula dark"
+graphite-mono :
+gruvbox :
+nordic-blue :
+rose-pine :
+tokyo-night :

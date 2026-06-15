@@ -1,0 +1,1 @@
+bash /home/a7med/dotfiles/scripts/login-menu/loginmenu.sh

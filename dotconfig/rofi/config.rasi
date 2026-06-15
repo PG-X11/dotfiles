@@ -1,0 +1,9 @@
+configuration {
+    modi: "drun,run";
+    font: "Fira Code 18";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
