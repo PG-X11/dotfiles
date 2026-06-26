@@ -1,0 +1,67 @@
+/* EVEFOREST ROFI MENU STYLE */
+/* This controls the look, appearance, and colors of your popup menu */
+
+* {
+    /* Color definitions, shades, and hues */
+    bg-color: #2b3339;
+    fg-color: #d3c6aa;
+    accent-color: #a6b465;
+    border-color: #a6b465;
+    selected-bg: #323c41;
+
+    /* Tell the menu to use our background and text colors globally */
+    background-color: @bg-color;
+    text-color: @fg-color;
+}
+
+/* The main outer window, box, or container */
+window {
+    width: 600px;
+    border: 3px;
+    border-color: @border-color;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* The box where you type your search words */
+inputbar {
+    background-color: @selected-bg;
+    padding: 10px;
+    border-radius: 5px;
+    children: [ prompt, entry ];
+}
+
+/* The little label that says "Select Theme" or "Run" */
+prompt {
+    text-color: @bg-color;
+    background-color: @accent-color;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 0px 10px 0px 0px;
+}
+
+/* The actual text cursor area where your typing appears */
+entry {
+    padding: 5px;
+    text-color: @fg-color;
+    background-color: @selected-bg;
+}
+
+/* The list, roster, or catalog of choices below the search bar */
+listview {
+    lines: 8;
+    margin: 15px 0px 0px 0px;
+    scrollbar: false;
+}
+
+/* Each individual choice, item, or row in the list */
+element {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* How an item looks when you highlight, hover, or select it */
+element selected {
+    background-color: @accent-color;
+    text-color: @bg-color;
+}

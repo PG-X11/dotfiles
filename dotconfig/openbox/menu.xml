@@ -14,7 +14,7 @@
 
       <item label="Prism Launcher">
         <action name="Execute">
-          <command>/home/a7med/Games/Minecraft/Prismlauncher.AppImage</command>
+          <command>/home/a7med/Games/Minecraft/Prismlauncher/launcher.sh</command>
         </action>
       </item>
 
@@ -33,6 +33,12 @@
       <item label="easyeffects">
         <action name="Execute">
           <command>easyeffects</command>
+        </action>
+      </item>
+
+      <item label="nvidia settings">
+        <action name="nvidia-settings">
+          <command>nvidia-settings</command>
         </action>
       </item>
 

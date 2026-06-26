@@ -1,0 +1,45 @@
+configuration {
+    modi: "drun,run";
+    font: "Fira Code 12";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    width: 40%;
+    height: 65%;
+    transparency: "real";
+    border: 1px;
+    border-radius: 20px;
+}
+
+listview {
+    columns: 1;
+    lines: 6;
+    spacing: 5px;
+    scrollbar: false;
+}
+
+element {
+    border-radius: 0px;
+    padding: 2px;
+}
+
+element-icon {
+    size: 48px;
+}
+entry {
+    placeholder: "Search clipboard ..";
+
+    margin: 6px 6px 6px 6px;
+    padding: 10px 7px;
+
+    border: 1px;
+    border-color: #89b4fa;
+    border-radius: 12px;
+    text-margin: 0px;
+    vertical-align: 0.5;
+}

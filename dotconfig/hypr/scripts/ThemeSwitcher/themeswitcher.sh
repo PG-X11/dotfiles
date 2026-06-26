@@ -29,7 +29,7 @@ find -L "$THEME_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
     [ -f "$preview" ] || preview="$HOME/.local/share/fallback.png"
 
     echo -en "${theme}\0icon\x1f${preview}\n"
-done | rofi -dmenu -i -p "Select Theme"
+done | rofi -dmenu -config "/home/a7med/dotfiles/dotconfig/hypr/scripts/ThemeSwitcher/themeswitcher.rasi" -i -p "Select Theme"
 )"
 # If you cancel the menu, the script stops immediately without errors[cite: 1].
 [ -z "${THEME:-}" ] && exit 0
@@ -51,8 +51,9 @@ ln -sfn "$THEME_PATH/rofi/style.rasi" "$ROFI_CONF"
 # APPLY GTK, KVANTUM, & QTCT
 # -------------------------
 # These are the original file paths you provided[cite: 1].
-GTK_SRC="$THEME_PATH/GTK/settings.ini"
-GTK_DEST="$HOME/.config/gtk-3.0/settings.ini"
+GTK_SRC="$THEME_PATH/GTK/nwg-look/gsettings"
+GTK_DEST="$HOME/.local/share/nwg-look/gsettings"
+
 
 KV_SRC="$THEME_PATH/KV/kvantum.kvconfig"
 KV_DEST="$HOME/.config/Kvantum/kvantum.kvconfig"
@@ -71,6 +72,8 @@ if [ -f "$GTK_SRC" ]; then
         nwg-look -a >/dev/null 2>&1 || true
     fi
 fi
+
+
 
 # --- Kvantum ---
 # If the Kvantum file exists, copy it over[cite: 1].

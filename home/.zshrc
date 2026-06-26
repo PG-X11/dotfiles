@@ -61,6 +61,10 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export NVIDIA_DRIVER_CAPABILITIES=all
 export __GL_SHADER_DISK_CACHE=1
 export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
+# for golang
+# Move Go's workspace out of the home
+export GOPATH="$HOME/.local/share/go"
+export PATH="$PATH:$GOPATH/bin"
 # =========================
 # COMPLETIONS
 # =========================

@@ -7,11 +7,11 @@ options=$(printf "Gamemode on\nGamemode off" | rofi -dmenu -p "choose power mode
 case "$options" in
     "Gamemode on")
         # Run the game-on script using absolute paths
-        bash /home/a7med/.config/hypr/gaming-mode/game-on.sh
+        bash /home/a7med/.config/hypr/scripts/gaming-mode/game-on.sh
         ;;
     "Gamemode off")
         # Run the game-off script using absolute paths
-        bash /home/a7med/.config/hypr/gaming-mode/game-off.sh
+        bash /home/a7med/.config/hypr/scripts/gaming-mode/game-off.sh
         ;;
     *)
         # If the user presses Escape or closes Rofi, exit quietly

@@ -1,0 +1,120 @@
+/* Import Pywal's dynamically generated color palette */
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    modi:                        "dmenu";
+    show-icons:                  true;
+    dmenu-column-header:         false;
+    hover-select:                true;
+    me-select-entry:             "MousePrimary";
+    me-accept-entry:             "MouseDPrimary";
+}
+
+/* Global Window Properties */
+window {
+    width:                       1200px;
+    height:                      700px;
+    anchor:                      center;
+    location:                    center;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                @selected-active-background; /* Pywal accent */
+    background-color:            @background;                 /* Pywal main background */
+    cursor:                      "default";
+}
+
+/* Main Container */
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/* Search Bar Area */
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               8px;
+    background-color:            @alternate-normal-background; /* Pywal slightly lighter/darker bg */
+    text-color:                  @foreground;                 /* Pywal main text color */
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @selected-active-background;
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search themes...";
+    placeholder-color:           @alternate-normal-foreground;
+}
+
+/* Grid Layout for Previews */
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     15px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/* Individual Grid Item Card */
+element {
+    enabled:                     true;
+    orientation:                 vertical;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               8px;
+    background-color:            @alternate-normal-background;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+/* Active / Hovered Card Selection */
+element selected.normal {
+    background-color:            @selected-normal-background; /* Pywal active background */
+    text-color:                  @selected-normal-foreground; /* Pywal active text */
+    border:                      2px solid;
+    border-color:                @selected-active-background;
+}
+
+/* Theme Preview Image */
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        400px;
+    cursor:                      inherit;
+    horizontal-align:            0.5;
+}
+
+/* Theme Name Label */
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}

@@ -43,14 +43,14 @@ generate_preview() {
 # -------------------------
 PICKED="$(
 find "$WALL_DIR" -maxdepth 1 -type f \
-    \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) \
+    \( -iname "*.gif" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) \
 | while read -r img; do
 
     preview="$(generate_preview "$img")"
     name="$(basename "$img")"
 
     echo -en "${name}\0icon\x1f${preview}\n"
-done | rofi -dmenu -i -p "Pick Wallpaper"
+done | rofi -dmenu -config "/home/a7med/Bookmarks/hypr/scripts/ThemeSwitcher/wallchanger.rasi" -i -p "Pick Wallpaper"
 )"
 
 [ -z "${PICKED:-}" ] && exit 0

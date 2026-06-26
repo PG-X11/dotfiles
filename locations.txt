@@ -1,0 +1,11 @@
+this file tells you the locations if you need to configure something
+
+--
+icon themes are in
+/dotfiles/dotlocal/share/icons
+--
+themes are
+in /dotfiles/home/.themes
+--
+/dotfiles/home/ - also includes
+.zshrc .zprofile and .xinitrc

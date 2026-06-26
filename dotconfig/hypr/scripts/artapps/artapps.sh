@@ -6,13 +6,8 @@ x=${pos%,*}
 y=${pos#*,}
 
 options=$(printf "blender\nkrita\ndarktable\naseprite\nopentabletdriver" | rofi \
-    -dmenu -p 'Art Apps' \
-    -width 20 \
-    -lines 6 \
-    -padding 12 \
-    -location 0 \
-    -xoffset "$x" \
-    -yoffset "$y"
+    -dmenu -p '' \
+    -config '/home/a7med/.config/hypr/scripts/artapps/rofi/config.rasi'
 )
 
 case "$options" in

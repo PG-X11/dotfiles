@@ -36,9 +36,10 @@ echo -e "${w}"
 
 
 # 1. Print the menu choices on the screen
-echo -e " ${g}1)${w} launch hyprland (Wayland)"
-echo -e " ${g}2)${w} launch openbox (X11)"
-echo -e " ${g}3)${w} Exit"
+echo -e " ${g}1)${w} launch hyprland (Normal)"
+echo -e " ${g}2)${w} launch hyprland (UWSM)"
+echo -e " ${g}3)${w} launch openbox (X11)"
+echo -e " ${g}4)${w} Exit"
 echo -e " ${r}x)${w} poweroff"
 
 echo
@@ -50,12 +51,15 @@ read -rp "Enter your choice: " choice
 # 3. Check what number they typed and do the action
 case "$choice" in
     "1")
-        clear && start-hyprland &
+        clear && exec start-hyprland
         ;;
     "2")
-        clear && xinit &
+        clear && exec uwsm start hyprland.desktop #sadly moved to uwsm but if the team behind xdg-desktop-portal fixes thiese issues, remove uwsm and edit this and thats all
         ;;
     "3")
+        clear && xinit &
+        ;;
+    "4")
         exit 0
         ;;
     "x")

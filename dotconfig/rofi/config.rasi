@@ -1,9 +1,46 @@
 configuration {
     modi: "drun,run";
-    font: "Fira Code 18";
+    font: "Fira Code 16";
     show-icons: true;
-    display-drun: "Apps";
+    display-drun: "";
     display-run: "Run";
 }
 
 @import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    width: 60%;
+    transparency: "real";
+    background-color: @background;
+    border: 1px;
+    border-radius: 20px;
+}
+
+listview {
+    columns: 2;
+    lines: 6;
+    spacing: 10px;
+    scrollbar: false;
+}
+
+element {
+    border-radius: 0px;
+    padding: 10px;
+}
+
+element-icon {
+    size: 52px;
+}
+entry {
+    placeholder: "Search apps ..";
+
+    margin: 6px 6px 6px 6px;
+    padding: 10px 7px;
+
+    border: 1px;
+    border-color: #89b4fa;
+    border-radius: 12px;
+    text-margin: 0px;
+    vertical-align: 0.5;
+}
+
