@@ -43,14 +43,13 @@ alias update='sudo pacman -Syu'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
 alias c='clear'
-alias fastfetch='fastfetch'
 alias yay='paru'
 
+alias pctui="pkexec pctui"
 #==========================
-# TERMINAL GOODIES
+# FASTFETCH
 # =========================
-
-fastfetch --config arch
+fastfetch --config ~/.config/fastfetch/presets/arch2
 # =========================
 # ENVIRONMENT
 # =========================

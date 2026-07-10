@@ -55,9 +55,21 @@
     </menu>
 
     <separator label="openbox session"/>
-    
+
+    <item label="Switch to Hyprland (Normal)">
+      <action name="Execute">
+        <command>bash /home/a7med/dotfiles/scripts/envswitcher/envswitcheropenbox.sh normal</command>
+      </action>
+    </item>
+
+    <item label="Switch to Hyprland (UWSM)">
+      <action name="Execute">
+        <command>bash /home/a7med/dotfiles/scripts/envswitcher/envswitcheropenbox.sh uwsm</command>
+      </action>
+    </item>
+
     <item label="Exit Session">
-      <action name="Exit" />
+      <action name="Exit"/>
     </item>
   </menu>
 </openbox_menu>

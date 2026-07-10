@@ -39,7 +39,8 @@ echo -e "${w}"
 echo -e " ${g}1)${w} launch hyprland (Normal)"
 echo -e " ${g}2)${w} launch hyprland (UWSM)"
 echo -e " ${g}3)${w} launch openbox (X11)"
-echo -e " ${g}4)${w} Exit"
+echo -e " ${g}4)${w} launch KDE (Wayland)"
+echo -e " ${g}e)${w} Exit"
 echo -e " ${r}x)${w} poweroff"
 
 echo
@@ -57,9 +58,13 @@ case "$choice" in
         clear && exec uwsm start hyprland.desktop #sadly moved to uwsm but if the team behind xdg-desktop-portal fixes thiese issues, remove uwsm and edit this and thats all
         ;;
     "3")
-        clear && xinit &
+        clear && exec xinit &
         ;;
     "4")
+        clear && exec dbus-run-session startplasma-wayland
+        ;;
+
+    "e")
         exit 0
         ;;
     "x")
