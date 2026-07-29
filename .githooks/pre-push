@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Updating package lists..."
+
+./scripts/pkg-tracker.sh
+
+git add packages/*.txt
+
+# Only create a commit if package lists changed
+if ! git diff --cached --quiet; then
+    git commit -m "chore: update package lists"
+fi
+
+## I will try to flag stuff as AI gen at the end of every script from now on 
+## AI GEN !

@@ -10,6 +10,7 @@ scripts that are AI made :
 - 55% of the window rules
 - animations.conf
 - screenshot scripts (although I did enhance them a lot by my self)
+- the package tracker in /scripts/pkg-tracker (which is super simple so its fine, could've made it myself but I do not want to waste time)
 
 these are all the AI vibe coded stuff in the dotfiles
 TO BE REPLACED
