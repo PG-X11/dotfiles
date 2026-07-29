@@ -27,14 +27,28 @@ generate_preview() {
     local out="$CACHE_DIR/$name.png"
 
     # skip regen if exists
-    if [ ! -f "$out" ]; then
-        if command -v convert >/dev/null 2>&1; then
-            convert "$img" -thumbnail 300x300^ -gravity center -extent 300x300 "$out"
-        else
-            cp "$img" "$out"
-        fi
+if [ ! -f "$out" ]; then
+    if command -v convert >/dev/null 2>&1; then
+        case "${img,,}" in
+            *.gif)
+                convert "${img}[0]" \
+                    -thumbnail 300x300^ \
+                    -gravity center \
+                    -extent 300x300 \
+                    "$out"
+                ;;
+            *)
+                convert "$img" \
+                    -thumbnail 300x300^ \
+                    -gravity center \
+                    -extent 300x300 \
+                    "$out"
+                ;;
+        esac
+    else
+        cp "$img" "$out"
     fi
-
+fi
     echo "$out"
 }
 
@@ -87,7 +101,7 @@ bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
 if command -v awww >/dev/null 2>&1; then
     awww img "$FULL_PATH" \
         --transition-type wipe \
-        --transition-duration 1.6
+        --transition-duration 1.4
 fi
 
 exit

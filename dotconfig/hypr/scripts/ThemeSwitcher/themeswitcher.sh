@@ -61,7 +61,18 @@ KV_DEST="$HOME/.config/Kvantum/kvantum.kvconfig"
 QTCT_SRC="$THEME_PATH/QTCT"
 QT5_DEST="$HOME/.config/qt5ct/qt5ct.conf"
 QT6_DEST="$HOME/.config/qt6ct/qt6ct.conf"
-
+# FINALLY found a fix for the icon theme, STILL not sure if it works
+# using qt6ct as a basis for the icon theme ..
+# QT_CONFIG="$HOME/.config/qt6ct/qt6ct.conf"
+# ICON_THEME=$(sed -n 's/^icon_theme[[:space:]]*=[[:space:]]*\(.*\)/\1/p' "$QT_CONFIG")
+# gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
+# # Broadcast to DBus for Wayland/Hyprland portals
+# dbus-send --session --dest=org.freedesktop.portal.Desktop \
+#     --type=method_call /org/freedesktop/portal/desktop \
+#     org.freedesktop.impl.portal.Settings.EmitSettingChanged \
+#     string:"org.gnome.desktop.interface" string:"icon-theme" \
+#     variant:string:"$ICON_THEME"
+# well it didnt work ):
 # --- GTK ---
 # If the GTK file exists in your theme, copy it over[cite: 1].
 if [ -f "$GTK_SRC" ]; then
@@ -82,17 +93,16 @@ if [ -f "$KV_SRC" ]; then
     cp "$KV_SRC" "$KV_DEST"
 fi
 
-# --- Qt5 / Qt6 CT (Original Restored Method) ---
-# This is your original code to copy the Qt configuration files and force them to apply[cite: 1].
+# code to apply config file for qt
 if [ -d "$QTCT_SRC" ]; then
     mkdir -p "$(dirname "$QT5_DEST")" "$(dirname "$QT6_DEST")"
 
-    # Copy qt5ct.conf if it exists inside the theme folder[cite: 1].
+    # qt5ct
     if [ -f "$QTCT_SRC/qt5ct.conf" ]; then
         cp "$QTCT_SRC/qt5ct.conf" "$QT5_DEST"
     fi
 
-    # Copy qt6ct.conf if it exists inside the theme folder[cite: 1].
+    # qt6ct
     if [ -f "$QTCT_SRC/qt6ct.conf" ]; then
         cp "$QTCT_SRC/qt6ct.conf" "$QT6_DEST"
     fi
@@ -135,7 +145,7 @@ if [ -L "$WALL_LINK" ] && [ -e "$WALL_LINK" ]; then
     if command -v awww >/dev/null 2>&1; then
         awww img "$WALL" \
             --transition-type grow \
-            --transition-duration 2
+            --transition-duration 1.7
     fi
 fi
 

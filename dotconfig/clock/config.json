@@ -1,7 +1,10 @@
 
 {
     "time_format": 12,
-    "font_pyfiglet": "standard",
+    "font_pyfiglet": "big",
     "show_date": "True",
-    "show_seconds": "False"
+    "show_seconds": "False",
+    "clock_color": "yellow",
+    "date_color": "purple"
+
 }

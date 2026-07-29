@@ -49,7 +49,8 @@ alias pctui="pkexec pctui"
 #==========================
 # FASTFETCH
 # =========================
-fastfetch --config ~/.config/fastfetch/presets/arch2
+fastfetch --config ~/.config/fastfetch/presets/custom
+alias fastfetch='fastfetch --config ~/.config/fastfetch/presets/custom'
 # =========================
 # ENVIRONMENT
 # =========================

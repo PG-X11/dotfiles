@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Open a Rofi menu and save the user's choice into a variable
-options=$(printf "Gamemode on\nGamemode off" | rofi -dmenu -p "choose power mode")
+options=$(printf "Gamemode on\nGamemode off" | rofi -dmenu -config /home/a7med/dotfiles/dotconfig/hypr/scripts/gaming-mode/rofi/config.rasi )
 
 # Check what the user selected
 case "$options" in

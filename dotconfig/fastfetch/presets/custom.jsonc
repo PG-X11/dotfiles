@@ -13,7 +13,7 @@
     "logo": {
         "source": "~/.config/fastfetch/ascii/arch.txt",
         "padding": {
-            "top": 2,
+            "top": 0,
             "right": 6
         }
     },

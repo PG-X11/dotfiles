@@ -1,0 +1,16 @@
+In this file I will tell you which scripts and parts of the dotfiles are vibe coded
+to be replaced in the future or enhanced
+since I am planning to completely change anything AI to human made
+
+scripts that are AI made :
+-  Themeswitcher and Wallchanger (mostly AI but all of the code was strictly watched over by me, so its fine)
+- Rofi themes (any rofi theme, since I didnt want to deal with rofi)
+- Envswitcher (Doesn't really matter since no one uses it also its broken)
+- monitors.conf in .config/hypr
+- 55% of the window rules
+- animations.conf
+- screenshot scripts (although I did enhance them a lot by my self)
+
+these are all the AI vibe coded stuff in the dotfiles
+TO BE REPLACED
+BEGONE AI
