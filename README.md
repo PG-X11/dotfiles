@@ -19,7 +19,9 @@ check [caution.txt](caution.txt)
 #### Themes :
 as mentioned earlier X11's rice also has a theme swithcer (yay!!)
 here are some screenshots of some themes that are here 
+
 ##### Everforest : showing workspace 1
+
 <p align="center">
   <img
     src="/assets/screenshots/everforest.webp"
@@ -27,14 +29,17 @@ here are some screenshots of some themes that are here
     width="800"
   />
 </p>
-##### Gruvbox : showing workspace 2]
+
+##### Gruvbox : showing workspace 2
+
 <p align="center">
   <img
     src="/assets/screenshots/gruvbox.webp"
-    alt="Gruvbox : showing workspace 2]"
+    alt="Gruvbox : showing workspace 2"
     width="800"
   />
 </p>
+
 ##### Cattpuccin mocha: showing workspace 3
 
 <p align="center">
@@ -44,7 +49,9 @@ here are some screenshots of some themes that are here
     width="800"
   />
 </p>
+
 ##### Nordic blue  : showing workspace 4
+
 <p align="center">
   <img
     src="/assets/screenshots/nordic-blue.webp"
@@ -58,6 +65,7 @@ here are some screenshots of some themes that are here
 *Note : if you need to change the icon theme you need to manually set them form qt5ct and qt6ct, I tried everything to solve this issue but blame it on the qtct devs since I cant call some function to apply whatsoever (planning to fork their thing to make it better)*
 #### Scripts :
 ##### Wallpaper Changer
+
 <p align="center">
   <img
     src="/assets/screenshots/wallpaper-changer.webp"
@@ -65,7 +73,9 @@ here are some screenshots of some themes that are here
     width="800"
   />
 </p>
+
 ##### App Menu
+
 <p align="center">
   <img
     src="/assets/screenshots/app-menu.webp"
@@ -73,7 +83,9 @@ here are some screenshots of some themes that are here
     width="800"
   />
 </p>
+
 ##### Gamemode
+
 <p align="center">
   <img
     src="/assets/screenshots/gamemode.webp"
