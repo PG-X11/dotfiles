@@ -2,7 +2,7 @@
 Welcome to X11's hyprland dotfiles, these dotfiles were made for a dell precision 7530 with a intel core I7 8850H , and an nvidia quadro p2000 (pascal series - legacy driver)  
 
 ## Caution : 
-please ** do not expect this to work for every single device out there**,
+please **do not expect this to work for every single device out there**,
 again this was made for a dell precision 7530 with an intel CPU and an NVIDIA gpu
 
 also note that **some tools and scripts were made by AI!**, ofcourse rechecked and validated by me (a human if you couldn't tell *lol*) and I made sure they work although some of them are under development 
