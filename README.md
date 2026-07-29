@@ -6,7 +6,7 @@ please **do not expect this to work for every single device out there**,
 again this was made for a dell precision 7530 with an intel CPU and an NVIDIA gpu
 
 also note that **some tools and scripts were made by AI!**, ofcourse rechecked and validated by me (a human if you couldn't tell *lol*) and I made sure they work although some of them are under development 
-check [caution.txt](caution.txt)
+check [Caution.txt](Caution.txt)
 ### Features : 
 - these dotfiles come with many nice features such as :
 - theme switcher (using rofi)
@@ -101,7 +101,7 @@ there are many more scripts, you can inspect the keybinds to figure them out !
 cant really credit all the sources for the wallpapers, and other things I forked 
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
 ### To-Do
-Forking Qt5/6ct  (fork them!)
+Forking Qt5/6ct  (fork them!),
 Making a favorite app menu (I love rofi)
 
 
