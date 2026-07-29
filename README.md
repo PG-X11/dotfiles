@@ -19,22 +19,68 @@ check [caution.txt](caution.txt)
 #### Themes :
 as mentioned earlier X11's rice also has a theme swithcer (yay!!)
 here are some screenshots of some themes that are here 
-![Everforest : showing workspace 1](/assets/screenshots/everforest.png)
-![Gruvbox : showing workspace 2](/assets/screenshots/gruvbox.png)
-![Cattpuccin mocha: showing workspace 3](/assets/screenshots/cattpuccin-mocha.png)
-![Nordic blue  : showing workspace 4](/assets/screenshots/nordic-blue.png)
+##### Everforest : showing workspace 1
+<p align="center">
+  <img
+    src="/assets/screenshots/everforest.webp"
+    alt="Everforest : showing workspace 1"
+    width="800"
+  />
+</p>
+##### Gruvbox : showing workspace 2]
+<p align="center">
+  <img
+    src="/assets/screenshots/gruvbox.webp"
+    alt="Gruvbox : showing workspace 2]"
+    width="800"
+  />
+</p>
+##### Cattpuccin mocha: showing workspace 3
 
-
+<p align="center">
+  <img
+    src="/assets/screenshots/cattpuccin-mocha.webp"
+    alt="Cattpuccin mocha: showing workspace 3"
+    width="800"
+  />
+</p>
+##### Nordic blue  : showing workspace 4
+<p align="center">
+  <img
+    src="/assets/screenshots/nordic-blue.webp"
+    alt="Nordic blue  : showing workspace 4"
+    width="800"
+  />
+</p>
 
 *Note: few themes are still not completed (rose pine & graphite mono) since I am trying to find better and cleaner wallpapers, gtk themes, kvantum configurations and many more ricing materials to make them feel complete and polished*
 
 *Note : if you need to change the icon theme you need to manually set them form qt5ct and qt6ct, I tried everything to solve this issue but blame it on the qtct devs since I cant call some function to apply whatsoever (planning to fork their thing to make it better)*
 #### Scripts :
-![wallpaper changer](/assets/screenshots/wallpaper-changer.png)
-![app menu](/assets/screenshots/app-menu.png)
-![game mode](/assets/screenshots/gamemode.png)
-
-
+##### Wallpaper Changer
+<p align="center">
+  <img
+    src="/assets/screenshots/wallpaper-changer.webp"
+    alt="wallpaper-changer"
+    width="800"
+  />
+</p>
+##### App Menu
+<p align="center">
+  <img
+    src="/assets/screenshots/app-menu.webp"
+    alt="app-menu"
+    width="800"
+  />
+</p>
+##### Gamemode
+<p align="center">
+  <img
+    src="/assets/screenshots/gamemode.webp"
+    alt="gamemode"
+    width="800"
+  />
+</p>
 there are many more scripts, you can inspect the keybinds to figure them out ! 
 
 
@@ -42,7 +88,7 @@ there are many more scripts, you can inspect the keybinds to figure them out !
 ### Credit :
 cant really credit all the sources for the wallpapers, and other things I forked 
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
-### TODO 
+### To-Do
 Forking Qt5/6ct  (fork them!)
 Making a favorite app menu (I love rofi)
 
