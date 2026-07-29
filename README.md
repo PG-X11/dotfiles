@@ -19,10 +19,10 @@ check [caution.txt](caution.txt)
 #### Themes :
 as mentioned earlier X11's rice also has a theme swithcer (yay!!)
 here are some screenshots of some themes that are here 
-[Everforest : showing workspace 1](/assets/screenshots/everforest.png)
-[Gruvbox : showing workspace 2](/assets/screenshots/gruvbox.png)
-[Cattpuccin mocha: showing workspace 3](/assets/screenshots/cattpuccin-mocha.png)
-[Nordic blue  : showing workspace 4](/assets/screenshots/nordic-blue.png)
+![Everforest : showing workspace 1](/assets/screenshots/everforest.png)
+![Gruvbox : showing workspace 2](/assets/screenshots/gruvbox.png)
+![Cattpuccin mocha: showing workspace 3](/assets/screenshots/cattpuccin-mocha.png)
+![Nordic blue  : showing workspace 4](/assets/screenshots/nordic-blue.png)
 
 
 
@@ -30,9 +30,9 @@ here are some screenshots of some themes that are here
 
 *Note : if you need to change the icon theme you need to manually set them form qt5ct and qt6ct, I tried everything to solve this issue but blame it on the qtct devs since I cant call some function to apply whatsoever (planning to fork their thing to make it better)*
 #### Scripts :
-[wallpaper changer](/assets/screenshots/wallpaper-changer.png)
-[app menu](/assets/screenshots/app-menu.png)
-[game mode](/assets/screenshots/gamemode.png)
+![wallpaper changer](/assets/screenshots/wallpaper-changer.png)
+![app menu](/assets/screenshots/app-menu.png)
+![game mode](/assets/screenshots/gamemode.png)
 
 
 there are many more scripts, you can inspect the keybinds to figure them out ! 
