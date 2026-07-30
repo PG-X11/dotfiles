@@ -100,6 +100,8 @@ there are many more scripts, you can inspect the keybinds to figure them out !
 ### Credit :
 cant really credit all the sources for the wallpapers, and other things I forked 
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
+
+> [Quickshell bar](https://github.com/tripathiji1312/quickshell)
 ### To-Do
 Forking Qt5/6ct  (fork them!),
 Making a favorite app menu (I love rofi)
