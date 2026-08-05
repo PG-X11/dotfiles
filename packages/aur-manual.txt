@@ -1,4 +1,3 @@
-airi-bin
 appimagelauncher
 aseprite
 asp
@@ -11,6 +10,7 @@ lib32-egl-wayland
 lib32-libdxvk
 lib32-nvidia-580xx-utils
 lib32-obs-vkcapture
+librewolf-bin
 media-downloader
 millennium-bin
 nvidia-580xx-dkms

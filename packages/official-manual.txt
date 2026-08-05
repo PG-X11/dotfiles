@@ -32,7 +32,6 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
 ffmpegthumbs
-firefox
 foliate
 fuse2
 fzf

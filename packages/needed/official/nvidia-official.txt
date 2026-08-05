@@ -1,0 +1,8 @@
+linux-firmware-nvidia
+egl-gbm
+egl-wayland
+egl-x11
+libva-nvidia-driver
+libvdpau
+opencl-nvidia
+nvtop

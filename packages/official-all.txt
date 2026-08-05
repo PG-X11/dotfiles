@@ -161,7 +161,6 @@ fftw
 file
 filesystem
 findutils
-firefox
 flac
 flex
 fluidsynth

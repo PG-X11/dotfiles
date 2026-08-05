@@ -14,6 +14,14 @@ check [Caution.txt](Caution.txt)
 - a [quickshell bar](https://github.com/tripathiji1312/quickshell)
 - screenshot tool and color picker 
 - Many useful scripts !
+### Installation :
+to install simply run this (ofcourse you need to have git installed)
+```
+git clone https://github.com/PG-X11/dotfiles.git
+cd dotfiles/scripts
+./install.sh
+```
+
 ### Preview :
 
 #### Themes :
@@ -94,7 +102,6 @@ here are some screenshots of some themes that are here
   />
 </p>
 there are many more scripts, you can inspect the keybinds to figure them out ! 
-
 
 
 ### Credit :
