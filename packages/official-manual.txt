@@ -39,7 +39,6 @@ gamemode
 gamescope
 git
 gnome-sound-recorder
-go
 gparted
 grim
 grub
@@ -54,8 +53,6 @@ inotify-tools
 intel-media-driver
 intel-ucode
 intel-undervolt
-jellyfin-server
-jellyfin-web
 jq
 kate
 kdegraphics-thumbnailers

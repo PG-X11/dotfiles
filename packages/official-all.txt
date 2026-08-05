@@ -27,7 +27,6 @@ arch-install-scripts
 archlinux-keyring
 archlinux-xdg-menu
 ark
-aspnet-runtime-9.0
 atkmm
 at-spi2-core
 attica
@@ -81,7 +80,6 @@ cblas
 cdparanoia
 cdrtools
 cfitsio
-chromaprint
 cifs-utils
 clang
 cliphist
@@ -120,7 +118,6 @@ dosfstools
 dotnet-host
 dotnet-runtime
 dotnet-runtime-8.0
-dotnet-runtime-9.0
 dotnet-sdk
 dotnet-targeting-pack
 double-conversion
@@ -215,7 +212,6 @@ gnome-sound-recorder
 gnulib-l10n
 gnupg
 gnutls
-go
 gobject-introspection-runtime
 gparted
 gperftools
@@ -301,9 +297,6 @@ jansson
 jasper
 jbig2dec
 jbigkit
-jellyfin-ffmpeg
-jellyfin-server
-jellyfin-web
 jemalloc
 jq
 js140
@@ -1474,5 +1467,4 @@ zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 zstd
-zvbi
 zxing-cpp
