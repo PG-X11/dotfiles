@@ -123,9 +123,9 @@ python-pip
 qemu-full
 qemu-img
 qt5ct
+qt5-wayland
 qt6-imageformats
 qt6-wayland
-quickshell
 ranger
 rofi
 satty

@@ -90,7 +90,6 @@ convertlit
 coreutils
 cpio
 cppdap
-cpptrace
 cryptsetup
 curl
 curl-impersonate
@@ -552,7 +551,6 @@ libdrm
 libdv
 libdvdnav
 libdvdread
-libdwarf
 libebml
 libebur128
 libedit
@@ -580,6 +578,7 @@ libgovirt
 libgpg-error
 libgudev
 libguestfs
+libical
 libice
 libidn
 libidn2
@@ -792,7 +791,6 @@ linux-lts
 linux-lts-headers
 linux-zen
 linux-zen-headers
-litehtml0.9
 lld
 llhttp
 llvm
@@ -1053,7 +1051,6 @@ python-pefile
 python-pexpect
 python-pillow
 python-pip
-python-pkg_resources
 python-platformdirs
 python-propcache
 python-protobuf
@@ -1201,6 +1198,7 @@ qt5ct
 qt5-declarative
 qt5-svg
 qt5-translations
+qt5-wayland
 qt5-x11extras
 qt6-5compat
 qt6-base
@@ -1225,7 +1223,6 @@ qt6-wayland
 qt6-webchannel
 qt6-webengine
 qt6-websockets
-quickshell
 ranger
 rav1e
 rdma-core
@@ -1296,6 +1293,7 @@ sratom
 srt
 starship
 startup-notification
+stb
 steam
 steam-devices
 strace
@@ -1385,6 +1383,7 @@ vmaf
 volume_key
 vte3
 vte-common
+vulkan-headers
 vulkan-icd-loader
 vulkan-intel
 vulkan-mesa-implicit-layers

@@ -12,8 +12,10 @@ lib32-nvidia-580xx-utils
 lib32-obs-vkcapture
 librewolf-bin
 libxnvctrl-580xx
+litehtml0.9
 media-downloader
 millennium-bin
+noctalia
 nvidia-580xx-dkms
 nvidia-580xx-settings
 nvidia-580xx-utils
@@ -26,8 +28,10 @@ paru-debug
 pipes.sh
 preload
 prism-tui-bin
+python-pkg_resources
 python-pywal16
 python-pywalfox
+qmplay2
 qmplay2-git
 qt6ct-kde
 stacer-bin

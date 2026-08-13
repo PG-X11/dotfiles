@@ -13,6 +13,7 @@ lib32-obs-vkcapture
 librewolf-bin
 media-downloader
 millennium-bin
+noctalia
 nvidia-580xx-dkms
 nvidia-580xx-settings
 obs-gstreamer
@@ -26,6 +27,7 @@ preload
 prism-tui-bin
 python-pywal16
 python-pywalfox
+qmplay2
 qmplay2-git
 qt6ct-kde
 stacer-bin
