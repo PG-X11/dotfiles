@@ -11,7 +11,7 @@ check [Caution.txt](Caution.txt)
 - these dotfiles come with many nice features such as :
 - theme switcher (using rofi)
 - wallpaper changer (rofi) 
-- a [quickshell bar](https://github.com/tripathiji1312/quickshell)
+- a [quickshell bar](https://github.com/noctalia-dev/noctalia)
 - screenshot tool and color picker 
 - Many useful scripts !
 ### Installation :
@@ -70,6 +70,8 @@ here are some screenshots of some themes that are here
 
 *Note: few themes are still not completed (rose pine & graphite mono) since I am trying to find better and cleaner wallpapers, gtk themes, kvantum configurations and many more ricing materials to make them feel complete and polished*
 
+*Note : if you clear the cache using something like 'stacer' it might break the wallpaper cache and some functionality, if that happenes switching the theme will easily fix it!*
+
 *Note : if you need to change the icon theme you need to manually set them form qt5ct and qt6ct, I tried everything to solve this issue but blame it on the qtct devs since I cant call some function to apply whatsoever (planning to fork their thing to make it better)*
 #### Scripts :
 ##### Wallpaper Changer
@@ -108,9 +110,15 @@ there are many more scripts, you can inspect the keybinds to figure them out !
 cant really credit all the sources for the wallpapers, and other things I forked 
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
 
-> [Quickshell bar](https://github.com/tripathiji1312/quickshell)
+> [Quickshell bar](https://github.com/noctalia-dev/noctalia)
 ### To-Do
 Forking Qt5/6ct  (fork them!),
-Making a favorite app menu (I love rofi)
-
-
+Making a favorite app menu (I love rofi),
+finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
+-- new -- 
+configure noctalia and make it properly beautiful and use the config manager plugin for multiple configs ! 
+Try to find community plugin for wal for noctalia 
+add some shortcuts for noctalia (noctalia msg -)
+finish themes 
+polish scripts and make caching faster on themeswithcer and wallchanger 
+OR migrate from wal to noctalia based (NO)

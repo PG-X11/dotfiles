@@ -1,2 +1,10 @@
 .cache/
 *history*
+
+# Noctalia local state files
+dotlocal/state/noctalia/clipboard
+dotlocal/state/noctalia/notification_history_assets
+dotlocal/state/noctalia/community-palettes
+dotlocal/state/noctalia/notification_history.json
+dotlocal/state/noctalia/plugin-cache
+dotlocal/state/noctalia/community-templates

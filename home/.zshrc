@@ -65,6 +65,7 @@ export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
 # Move Go's workspace out of the home
 export GOPATH="$HOME/.local/share/go"
 export PATH="$PATH:$GOPATH/bin"
+export MOZ_ENABLE_WAYLAND=1
 # =========================
 # COMPLETIONS
 # =========================

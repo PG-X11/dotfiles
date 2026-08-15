@@ -1,0 +1,17 @@
+[wallpaper]
+enabled = false
+config_version = 8
+
+[shell]
+show_location = false
+time_format = "{:%I:%M}"
+
+[theme]
+builtin = "Catppuccin"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+
+[weather]
+enabled = false

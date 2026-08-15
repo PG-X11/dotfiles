@@ -2,6 +2,6 @@
 
 # browser
 
-if ! hyprctl clients | grep -q "class: firefox"; then
+if ! hyprctl clients | grep -q "class: librewolf"; then
     librewolf &
 fi

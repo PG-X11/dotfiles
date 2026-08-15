@@ -109,10 +109,10 @@ if [ -d "$QTCT_SRC" ]; then
 fi
 
 # This runs the programs quietly in the background to apply the settings, then turns them off[cite: 1].
-qt5ct --reply >/dev/null 2>&1 &
-qt6ct --reply >/dev/null 2>&1 &
-sleep 0.2
-killall qt5ct qt6ct
+# qt5ct --reply >/dev/null 2>&1 &
+# qt6ct --reply >/dev/null 2>&1 &
+# sleep 0.2
+# killall qt5ct qt6ct
 
 # -------------------------
 # APPLY PYWAL FROM THEME WALLPAPER
@@ -124,7 +124,7 @@ if [ -L "$WALL_LINK" ] && [ -e "$WALL_LINK" ]; then
     WALL="$(readlink -f "$WALL_LINK")"
 
     if command -v wal >/dev/null 2>&1; then
-        wal -i "$WALL" -q
+        wal -n -i "$WALL" -q
     fi
 fi
 # For zed editor run the zed wal theme  extension reloader
@@ -132,9 +132,8 @@ bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
 # -------------------------
 # RELOAD SHELL
 # -------------------------
-# This reloads your quickshell immediately[cite: 1].
-bash /home/a7med/.config/quickshell/reload-quickshell.sh
-
+# human interception, switched to noctalia LOL
+noctalia msg wallpaper-set $WALL
 # -------------------------
 # APPLY LAST WALLPAPER
 # -------------------------
@@ -145,7 +144,8 @@ if [ -L "$WALL_LINK" ] && [ -e "$WALL_LINK" ]; then
     if command -v awww >/dev/null 2>&1; then
         awww img "$WALL" \
             --transition-type grow \
-            --transition-duration 1.7
+            --transition-duration 1.7 \
+            --transition-fps 120
     fi
 fi
 

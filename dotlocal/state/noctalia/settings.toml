@@ -1,0 +1,154 @@
+config_version = 8
+
+[bar.default]
+background_opacity = 0.59999998658895493
+border = "primary"
+border_width = 0.5
+capsule_border = "tertiary"
+capsule_padding = 15.0
+capsule_thickness = 0.71999998763203621
+concave_edge_corners = false
+end = [ "media", "network", "group:g2" ]
+font_family = "Noto Kufi Arabic"
+font_weight = 300
+margin_ends = 17
+padding = 11
+radius = 13
+scale = 1.2000000104308128
+shadow = false
+start = [ "group:g1", "workspaces" ]
+thickness = 32
+widget_spacing = 9
+
+    [[bar.default.capsule_group]]
+    border = ""
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "launcher", "control-center", "session" ]
+    opacity = 0.65999996662139893
+    padding = 8.0
+
+    [[bar.default.capsule_group]]
+    border = ""
+    enabled = true
+    fill = "surface_variant"
+    id = "g2"
+    members = [ "battery", "clipboard", "notifications" ]
+    opacity = 0.65999996662139893
+    padding = 4.0
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.0
+    cy = 718.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.0
+    cy = 718.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[shell]
+show_location = false
+time_format = "{:%I:%M}"
+
+    [shell.animation]
+    speed = 0.60000000894069672
+
+    [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Catppuccin"
+mode = "dark"
+wallpaper_scheme = "m3-monochrome"
+
+[wallpaper.default]
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Arch-2.jpg"
+
+[wallpaper.last]
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Arch-2.jpg"
+
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Space.jpg"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Arch-2.jpg"
+
+[weather]
+enabled = false
+
+[widget.clock]
+format = "{:%I:%M}"
+
+[widget.media]
+hide_when_no_media = true
+max_length = 80
+min_length = 10
+title_scroll = "always"
+
+[widget.workspaces]
+hide_when_empty = true

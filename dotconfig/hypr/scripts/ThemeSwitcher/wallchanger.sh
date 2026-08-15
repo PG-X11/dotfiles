@@ -83,7 +83,7 @@ ln -sfn "$FULL_PATH" "$THEME_PATH/.preview.png"
 # PYWAL INTEGRATION
 # -------------------------
 if command -v wal >/dev/null 2>&1; then
-    wal -i "$FULL_PATH" -q
+    wal -n -i "$FULL_PATH" -q
 
     # optional: update symlinked theme colors
     THEME_FILE="$THEME_PATH/hypr/colors.conf"
@@ -91,8 +91,8 @@ if command -v wal >/dev/null 2>&1; then
     # reload hyprland colors after pywal
     # hyprctl reload
 fi
-# relolad quick shell and apply the wal theme
-bash /home/a7med/.config/quickshell/reload-quickshell.sh
+# Set wallpaper colors for noctalia, BYE BYE QUICK SHELL !
+noctalia msg wallpaper-set $FULL_PATH
 # For zed editor run the zed wal theme  extension reloader
 bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
 # -------------------------
@@ -101,7 +101,8 @@ bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
 if command -v awww >/dev/null 2>&1; then
     awww img "$FULL_PATH" \
         --transition-type wipe \
-        --transition-duration 1.4
+        --transition-duration 1.4 \
+        --transition-fps 120
 fi
 
 exit
