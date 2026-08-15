@@ -43,7 +43,6 @@ baloo-widgets
 base
 base-devel
 bash
-bc
 bcc
 binutils
 bison
@@ -63,7 +62,6 @@ brotli
 btop
 btrfs-progs
 bubblewrap
-bun
 bzip2
 cabextract
 ca-certificates
@@ -143,7 +141,6 @@ ethtool
 exiv2
 expac
 expat
-expect
 faad2
 fakeroot
 fastfetch
@@ -700,7 +697,6 @@ libtiff
 libtirpc
 libtommath
 libtool
-libtorrent
 libtpms
 libtraceevent
 libtracefs
@@ -975,7 +971,6 @@ python-aiohttp
 python-aiosignal
 python-attrs
 python-autocommand
-python-babel
 python-bcc
 python-bcrypt
 python-beautifulsoup4
@@ -1001,7 +996,6 @@ python-debian
 python-decorator
 python-distro
 python-dnspython
-python-docutils
 python-dulwich
 python-evdev
 python-eventlet
@@ -1017,7 +1011,6 @@ python-gnupg
 python-gobject
 python-greenlet
 python-idna
-python-imagesize
 python-importlib-metadata
 python-itsdangerous
 python-jaraco.classes
@@ -1048,7 +1041,6 @@ python-orjson
 python-packaging
 python-patiencediff
 python-pefile
-python-pexpect
 python-pillow
 python-pip
 python-platformdirs
@@ -1059,7 +1051,6 @@ python-proton-keyring-linux
 python-proton-vpn-api-core
 python-proton-vpn-local-agent
 python-psutil
-python-ptyprocess
 python-pycparser
 python-pycurl
 python-pygments
@@ -1070,29 +1061,18 @@ python-pyqt6
 python-pyqt6-sip
 python-pyqt6-webengine
 python-pysocks
-python-pytz
 python-pyudev
 python-pyxdg
 python-referencing
 python-requests
 python-rich
-python-roman-numerals-py
 python-rpds-py
 python-secretstorage
 python-send2trash
 python-sentry_sdk
 python-setuptools
 python-six
-python-snowballstemmer
 python-soupsieve
-python-sphinx
-python-sphinx-alabaster-theme
-python-sphinxcontrib-applehelp
-python-sphinxcontrib-devhelp
-python-sphinxcontrib-htmlhelp
-python-sphinxcontrib-jsmath
-python-sphinxcontrib-qthelp
-python-sphinxcontrib-serializinghtml
 python-tomlkit
 python-tqdm
 python-typing_extensions
@@ -1293,7 +1273,6 @@ sratom
 srt
 starship
 startup-notification
-stb
 steam
 steam-devices
 strace
@@ -1311,7 +1290,6 @@ systemsettings
 taglib
 talloc
 tar
-tcl
 tdb
 tevent
 texinfo
@@ -1340,7 +1318,6 @@ usbutils
 uthash
 util-linux
 util-linux-libs
-uv
 uwsm
 v4l-utils
 vapoursynth
@@ -1383,7 +1360,6 @@ vmaf
 volume_key
 vte3
 vte-common
-vulkan-headers
 vulkan-icd-loader
 vulkan-intel
 vulkan-mesa-implicit-layers

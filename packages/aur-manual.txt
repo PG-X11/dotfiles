@@ -6,7 +6,6 @@ dxvk-bin
 easyeffects-git
 fstrcmp
 ifrextractor-ls
-lib32-egl-wayland
 lib32-libdxvk
 lib32-nvidia-580xx-utils
 lib32-obs-vkcapture
