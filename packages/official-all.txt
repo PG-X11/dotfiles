@@ -1177,6 +1177,7 @@ qt5-base
 qt5ct
 qt5-declarative
 qt5-svg
+qt5-tools
 qt5-translations
 qt5-wayland
 qt5-x11extras

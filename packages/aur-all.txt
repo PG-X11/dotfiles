@@ -32,6 +32,7 @@ python-pywal16
 python-pywalfox
 qmplay2
 qmplay2-git
+qt5ct-refresh-git
 qt6ct-kde
 stacer-bin
 tty-clock
