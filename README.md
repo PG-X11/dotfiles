@@ -11,7 +11,7 @@ check [Caution.txt](Caution.txt)
 - these dotfiles come with many nice features such as :
 - theme switcher (using rofi)
 - wallpaper changer (rofi) 
-- a [quickshell bar](https://github.com/noctalia-dev/noctalia)
+- [Noctalia shell](https://github.com/noctalia-dev/noctalia)
 - screenshot tool and color picker 
 - Many useful scripts !
 ### Installation :
@@ -110,15 +110,11 @@ there are many more scripts, you can inspect the keybinds to figure them out !
 cant really credit all the sources for the wallpapers, and other things I forked 
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
 
-> [Quickshell bar](https://github.com/noctalia-dev/noctalia)
+> [Noctalia shell](https://github.com/noctalia-dev/noctalia)
 ### To-Do
 Forking Qt5/6ct  (fork them!),
 Making a favorite app menu (I love rofi),
 finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
--- new -- 
-configure noctalia and make it properly beautiful and use the config manager plugin for multiple configs ! 
-Try to find community plugin for wal for noctalia 
-add some shortcuts for noctalia (noctalia msg -)
 finish themes 
 polish scripts and make caching faster on themeswithcer and wallchanger 
-OR migrate from wal to noctalia based (NO)
+
