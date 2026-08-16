@@ -61,20 +61,8 @@ KV_DEST="$HOME/.config/Kvantum/kvantum.kvconfig"
 QTCT_SRC="$THEME_PATH/QTCT"
 QT5_DEST="$HOME/.config/qt5ct/qt5ct.conf"
 QT6_DEST="$HOME/.config/qt6ct/qt6ct.conf"
-# FINALLY found a fix for the icon theme, STILL not sure if it works
-# using qt6ct as a basis for the icon theme ..
-# QT_CONFIG="$HOME/.config/qt6ct/qt6ct.conf"
-# ICON_THEME=$(sed -n 's/^icon_theme[[:space:]]*=[[:space:]]*\(.*\)/\1/p' "$QT_CONFIG")
-# gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
-# # Broadcast to DBus for Wayland/Hyprland portals
-# dbus-send --session --dest=org.freedesktop.portal.Desktop \
-#     --type=method_call /org/freedesktop/portal/desktop \
-#     org.freedesktop.impl.portal.Settings.EmitSettingChanged \
-#     string:"org.gnome.desktop.interface" string:"icon-theme" \
-#     variant:string:"$ICON_THEME"
-# well it didnt work ):
-# --- GTK ---
-# If the GTK file exists in your theme, copy it over[cite: 1].
+
+
 if [ -f "$GTK_SRC" ]; then
     mkdir -p "$(dirname "$GTK_DEST")"
     cp "$GTK_SRC" "$GTK_DEST"
@@ -108,12 +96,9 @@ if [ -d "$QTCT_SRC" ]; then
     fi
 fi
 
-# This runs the programs quietly in the background to apply the settings, then turns them off[cite: 1].
-# qt5ct --reply >/dev/null 2>&1 &
-# qt6ct --reply >/dev/null 2>&1 &
-# sleep 0.2
-# killall qt5ct qt6ct
-
+# this tool saved my sanity as a human being
+# found it on the aur, I made sure its not infected !
+qt5ct-refresh
 # -------------------------
 # APPLY PYWAL FROM THEME WALLPAPER
 # -------------------------
@@ -128,7 +113,7 @@ if [ -L "$WALL_LINK" ] && [ -e "$WALL_LINK" ]; then
     fi
 fi
 # For zed editor run the zed wal theme  extension reloader
-bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
+# bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
 # -------------------------
 # RELOAD SHELL
 # -------------------------

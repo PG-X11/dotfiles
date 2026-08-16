@@ -127,16 +127,16 @@ mode = "dark"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/dotfiles/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
 
 [wallpaper.last]
-path = "/home/a7med/dotfiles/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/dotfiles/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/dotfiles/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
 
 [weather]
 enabled = false

@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Enable fast, case-insensitive memory search for files
+shopt -s nullglob nocaseglob
+
 THEME_DIR="$HOME/.local/share/colorschemes"
 STATE_DIR="$HOME/.cache/colorschemes"
 ACTIVE_THEME_FILE="$STATE_DIR/current_theme"
@@ -18,50 +21,35 @@ mkdir -p "$CACHE_DIR"
 [ -d "$WALL_DIR" ] || exit 1
 
 # -------------------------
-# thumbnail generator
+# INSTANT WALLPAPER MENU
 # -------------------------
-generate_preview() {
-    local img="$1"
-    local name
-    name="$(basename "$img")"
-    local out="$CACHE_DIR/$name.png"
-
-    # skip regen if exists
-if [ ! -f "$out" ]; then
-    if command -v convert >/dev/null 2>&1; then
-        case "${img,,}" in
-            *.gif)
-                convert "${img}[0]" \
-                    -thumbnail 300x300^ \
-                    -gravity center \
-                    -extent 300x300 \
-                    "$out"
-                ;;
-            *)
-                convert "$img" \
-                    -thumbnail 300x300^ \
-                    -gravity center \
-                    -extent 300x300 \
-                    "$out"
-                ;;
-        esac
-    else
-        cp "$img" "$out"
-    fi
-fi
-    echo "$out"
-}
-
-# -------------------------
-# WALLPAPER MENU WITH PREVIEW
-# -------------------------
+# Replaced 'find' with fast native bash globbing.
+# Missing thumbnails generate in the background so the menu never freezes.
 PICKED="$(
-find "$WALL_DIR" -maxdepth 1 -type f \
-    \( -iname "*.gif" -o -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) \
-| while read -r img; do
-
-    preview="$(generate_preview "$img")"
+for img in "$WALL_DIR"/*.{gif,png,jpg,jpeg,webp}; do
     name="$(basename "$img")"
+    out="$CACHE_DIR/$name.png"
+    preview="$out"
+
+    # Check if thumbnail exists
+    if [ ! -f "$out" ]; then
+        # Use fallback instantly so Rofi does not wait
+        preview="$HOME/.local/share/fallback.png"
+
+        # Generate the real thumbnail in the background for next time
+        if command -v convert >/dev/null 2>&1; then
+            case "$img" in
+                *.gif)
+                    convert "${img}[0]" -thumbnail 300x300^ -gravity center -extent 300x300 "$out" &
+                    ;;
+                *)
+                    convert "$img" -thumbnail 300x300^ -gravity center -extent 300x300 "$out" &
+                    ;;
+            esac
+        else
+            cp "$img" "$out" &
+        fi
+    fi
 
     echo -en "${name}\0icon\x1f${preview}\n"
 done | rofi -dmenu -config "/home/a7med/Bookmarks/hypr/scripts/ThemeSwitcher/wallchanger.rasi" -i -p "Pick Wallpaper"
@@ -73,36 +61,33 @@ FULL_PATH="$WALL_DIR/$PICKED"
 [ -f "$FULL_PATH" ] || exit 1
 
 # -------------------------
-# SYMLINK SYSTEM (IMPORTANT)
+# SYMLINK SYSTEM
 # -------------------------
 ln -sfn "$FULL_PATH" "$THEME_PATH/current_wallpaper"
-
-# update theme preview (for theme switcher UI)
 ln -sfn "$FULL_PATH" "$THEME_PATH/.preview.png"
+
 # -------------------------
-# PYWAL INTEGRATION
+# ASYNCHRONOUS PROCESSING
 # -------------------------
+# Send heavy tasks to the background so the script exits instantly
 if command -v wal >/dev/null 2>&1; then
-    wal -n -i "$FULL_PATH" -q
-
-    # optional: update symlinked theme colors
-    THEME_FILE="$THEME_PATH/hypr/colors.conf"
-
-    # reload hyprland colors after pywal
-    # hyprctl reload
+    wal -n -i "$FULL_PATH" -q &
 fi
-# Set wallpaper colors for noctalia, BYE BYE QUICK SHELL !
-noctalia msg wallpaper-set $FULL_PATH
-# For zed editor run the zed wal theme  extension reloader
-bash /home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh
-# -------------------------
-# APPLY WALLPAPER
-# -------------------------
+
+if command -v noctalia >/dev/null 2>&1; then
+    noctalia msg wallpaper-set "$FULL_PATH" &
+fi
+
 if command -v awww >/dev/null 2>&1; then
     awww img "$FULL_PATH" \
         --transition-type wipe \
         --transition-duration 1.4 \
-        --transition-fps 120
+        --transition-fps 120 &
 fi
 
-exit
+ZED_SCRIPT="/home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh"
+if [ -f "$ZED_SCRIPT" ]; then
+    bash "$ZED_SCRIPT" &
+fi
+
+exit 0
