@@ -118,3 +118,4 @@ finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpun
 finish themes 
 polish scripts and make caching faster on themeswithcer and wallchanger 
 
+find a good cli configurable music player, something like cliamp but more configurable 

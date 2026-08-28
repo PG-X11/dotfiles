@@ -33,7 +33,7 @@ element-icon {
     size: 52px;
 }
 entry {
-    placeholder: "Search art apps ..";
+    placeholder: "Search presets ..";
 
     margin: 6px 6px 6px 6px;
     padding: 10px 7px;

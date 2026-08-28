@@ -1,9 +1,8 @@
 config_version = 8
 
 [bar.default]
-background_opacity = 0.59999998658895493
+background_opacity = 0.88999998010694981
 border = "primary"
-border_width = 0.5
 capsule_border = "tertiary"
 capsule_padding = 15.0
 capsule_thickness = 0.71999998763203621
@@ -110,6 +109,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_weather = true
 
 [shell]
+avatar_path = "/home/a7med/.face"
 show_location = false
 time_format = "{:%I:%M}"
 
@@ -119,6 +119,7 @@ time_format = "{:%I:%M}"
     [shell.panel]
     control_center_placement = "floating"
     open_near_click_control_center = true
+    polkit_placement = "attached"
     transparency_mode = "glass"
 
 [theme]
@@ -127,16 +128,16 @@ mode = "dark"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
 
 [wallpaper.last]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Skull.jpg"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
 
 [weather]
 enabled = false

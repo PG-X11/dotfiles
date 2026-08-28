@@ -44,7 +44,8 @@ alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
 alias c='clear'
 alias yay='paru'
-
+alias unusedpkg='sudo pacman -Qdtq | sudo pacman -Rns -'
+alias aurchk='cat ~/Desktop/Other/AUR-Malware/list.txt | grep'
 alias pctui="pkexec pctui"
 #==========================
 # FASTFETCH
@@ -57,7 +58,6 @@ alias fastfetch='fastfetch --config ~/.config/fastfetch/presets/custom'
 
 export EDITOR=kate
 export TERMINAL=kitty
-export QT_QPA_PLATFORMTHEME=qt6ct
 export NVIDIA_DRIVER_CAPABILITIES=all
 export __GL_SHADER_DISK_CACHE=1
 export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
