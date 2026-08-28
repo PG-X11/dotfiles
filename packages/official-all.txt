@@ -31,6 +31,7 @@ atkmm
 at-spi2-core
 attica
 attr
+audacity
 audit
 augeas
 aurorae
@@ -402,7 +403,6 @@ lib32-fontconfig
 lib32-freetype2
 lib32-gamemode
 lib32-gcc-libs
-lib32-giflib
 lib32-glew
 lib32-glib2
 lib32-glibc
@@ -466,7 +466,6 @@ lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
-lib32-openal
 lib32-openssl
 lib32-p11-kit
 lib32-pcre2
@@ -477,7 +476,6 @@ lib32-spirv-tools
 lib32-sqlite
 lib32-systemd
 lib32-util-linux
-lib32-v4l-utils
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-mesa-implicit-layers
@@ -577,6 +575,7 @@ libgudev
 libguestfs
 libical
 libice
+libid3tag
 libidn
 libidn2
 libiec61883
@@ -613,6 +612,7 @@ libmng
 libmnl
 libmodplug
 libmpc
+libmspack
 libmtp
 libmysofa
 libnbd
@@ -665,6 +665,7 @@ librsvg
 librsync
 libsamplerate
 libsasl
+libsbsms
 libseccomp
 libsecret
 libshout
@@ -840,6 +841,7 @@ networkmanager-vpn-plugin-openvpn
 nftables
 ninja
 nlohmann-json
+noctalia
 node-gyp
 nodejs
 nodejs-nopt
@@ -874,6 +876,7 @@ openssl
 openvpn
 openxr
 opus
+opusfile
 orc
 osinfo-db
 os-prober
@@ -953,6 +956,8 @@ poppler-data
 poppler-qt6
 popt
 portaudio
+portmidi
+portsmf
 powerdevil
 power-profiles-daemon
 prismlauncher
@@ -1099,7 +1104,6 @@ qemu-audio-spice
 qemu-base
 qemu-block-curl
 qemu-block-dmg
-qemu-block-gluster
 qemu-block-iscsi
 qemu-block-nfs
 qemu-block-ssh
@@ -1177,7 +1181,6 @@ qt5-base
 qt5ct
 qt5-declarative
 qt5-svg
-qt5-tools
 qt5-translations
 qt5-wayland
 qt5-x11extras
@@ -1279,6 +1282,7 @@ steam-devices
 strace
 subversion
 sudo
+suil
 supermin
 svt-av1
 swtpm
@@ -1321,6 +1325,7 @@ util-linux
 util-linux-libs
 uwsm
 v4l-utils
+vamp-plugin-sdk
 vapoursynth
 vde2
 vid.stab
@@ -1386,6 +1391,8 @@ woff2-font-awesome
 wofi
 wolfssl
 wpa_supplicant
+wxwidgets-common
+wxwidgets-gtk3
 x264
 x265
 xcb-imdkit

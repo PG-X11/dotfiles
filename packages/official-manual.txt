@@ -3,6 +3,7 @@ anki
 arch-install-scripts
 archlinux-xdg-menu
 ark
+audacity
 awww
 base
 base-devel
@@ -61,14 +62,11 @@ konsole
 kservice5
 kvantum-qt5
 lib32-gamemode
-lib32-giflib
 lib32-libffi
 lib32-libpng
 lib32-mangohud
 lib32-mesa
 lib32-mpg123
-lib32-openal
-lib32-v4l-utils
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-mesa-layers
@@ -92,6 +90,7 @@ minizip
 mpv
 nano
 networkmanager
+noctalia
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
