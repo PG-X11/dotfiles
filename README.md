@@ -68,11 +68,10 @@ here are some screenshots of some themes that are here
   />
 </p>
 
-*Note: few themes are still not completed (rose pine & graphite mono) since I am trying to find better and cleaner wallpapers, gtk themes, kvantum configurations and many more ricing materials to make them feel complete and polished*
+*Note: a theme is still not completed (rose pine) since I am trying to find better and cleaner wallpapers, gtk themes, kvantum configurations and many more ricing materials to make them feel complete and polished*
 
 *Note : if you clear the cache using something like 'stacer' it might break the wallpaper cache and some functionality, if that happenes switching the theme will easily fix it!*
 
-*Note : if you need to change the icon theme you need to manually set them form qt5ct and qt6ct, I tried everything to solve this issue but blame it on the qtct devs since I cant call some function to apply whatsoever (planning to fork their thing to make it better)*
 #### Scripts :
 ##### Wallpaper Changer
 
@@ -112,10 +111,7 @@ sadly did not keep track of them so if you find something yours tell me and I wi
 
 > [Noctalia shell](https://github.com/noctalia-dev/noctalia)
 ### To-Do
-Forking Qt5/6ct  (fork them!),
+
 Making a favorite app menu (I love rofi),
 finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
-finish themes 
-polish scripts and make caching faster on themeswithcer and wallchanger 
-
 find a good cli configurable music player, something like cliamp but more configurable 
