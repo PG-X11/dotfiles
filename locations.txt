@@ -9,3 +9,6 @@ in /dotfiles/home/.themes
 --
 /dotfiles/home/ - also includes
 .zshrc .zprofile and .xinitrc
+--
+kvantum themes are in
+/dotfiles/dotconfig/kvantum

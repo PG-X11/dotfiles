@@ -1,3 +1,9 @@
+#==========================
+# FASTFETCH
+# =========================
+fastfetch --config ~/.config/fastfetch/presets/custom
+alias fastfetch='fastfetch --config ~/.config/fastfetch/presets/custom'
+
 # =========================
 # BASIC
 # =========================
@@ -47,11 +53,7 @@ alias yay='paru'
 alias unusedpkg='sudo pacman -Qdtq | sudo pacman -Rns -'
 alias aurchk='cat ~/Desktop/Other/AUR-Malware/list.txt | grep'
 alias pctui="pkexec pctui"
-#==========================
-# FASTFETCH
-# =========================
-fastfetch --config ~/.config/fastfetch/presets/custom
-alias fastfetch='fastfetch --config ~/.config/fastfetch/presets/custom'
+
 # =========================
 # ENVIRONMENT
 # =========================

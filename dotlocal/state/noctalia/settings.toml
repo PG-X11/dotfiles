@@ -128,16 +128,16 @@ mode = "dark"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
+path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
 
 [wallpaper.last]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
+path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
+path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Spill.jpg"
+path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
 
 [weather]
 enabled = false

@@ -62,7 +62,6 @@ QTCT_SRC="$THEME_PATH/QTCT"
 QT5_DEST="$HOME/.config/qt5ct/qt5ct.conf"
 QT6_DEST="$HOME/.config/qt6ct/qt6ct.conf"
 
-
 if [ -f "$GTK_SRC" ]; then
     mkdir -p "$(dirname "$GTK_DEST")"
     cp "$GTK_SRC" "$GTK_DEST"
@@ -80,7 +79,15 @@ if [ -f "$KV_SRC" ]; then
     mkdir -p "$(dirname "$KV_DEST")"
     cp "$KV_SRC" "$KV_DEST"
 fi
-
+# --- icon theme ---
+ICON_THEME="$(grep '^icon_theme=' "$QTCT_SRC/qt5ct.conf" 2>/dev/null | cut -d'=' -f2)"
+if [ -n "$ICON_THEME" ]; then
+    if ! grep -q '^\[Icons\]' ~/.config/kdeglobals; then
+        echo -e "\n[Icons]\nTheme=$ICON_THEME" >> ~/.config/kdeglobals
+    else
+        sed -i "s/^Theme=.*/Theme=$ICON_THEME/" ~/.config/kdeglobals
+    fi
+fi
 # code to apply config file for qt
 if [ -d "$QTCT_SRC" ]; then
     mkdir -p "$(dirname "$QT5_DEST")" "$(dirname "$QT6_DEST")"
@@ -96,9 +103,7 @@ if [ -d "$QTCT_SRC" ]; then
     fi
 fi
 
-# this tool saved my sanity as a human being
-# found it on the aur, I made sure its not infected !
-qt5ct-refresh
+
 # -------------------------
 # APPLY PYWAL FROM THEME WALLPAPER
 # -------------------------
