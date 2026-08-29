@@ -6,7 +6,7 @@ mkdir -p "$scrdr"
 filename="$scrdr/screenshot-$(date +%Y%m%d-%H%M%S).png"
 
 ## Screen shot function
-grim -g "$(slurp)" -t ppm - | satty --filename - --fullscreen --output-filename "$filename" --early-exit
+grim -g "$(slurp)" -t ppm - | satty --copy-command wl-copy --filename - --fullscreen --output-filename "$filename" --early-exit
 
 # Handle the clipboard seamlessly with your background cliphist daemon
 if [ -f "$filename" ]; then

@@ -128,16 +128,16 @@ mode = "dark"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
+path = "/home/a7med/dotfiles/colorschemes/gruvbox/wallpapers/Moon.png"
 
 [wallpaper.last]
-path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
+path = "/home/a7med/dotfiles/colorschemes/gruvbox/wallpapers/Moon.png"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
+path = "/home/a7med/dotfiles/colorschemes/gruvbox/wallpapers/Moon.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/dotfiles/colorschemes/everforest/wallpapers/Mountain.png"
+path = "/home/a7med/dotfiles/colorschemes/gruvbox/wallpapers/Moon.png"
 
 [weather]
 enabled = false
