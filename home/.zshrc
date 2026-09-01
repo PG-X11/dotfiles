@@ -5,8 +5,14 @@ fastfetch --config ~/.config/fastfetch/presets/custom
 alias fastfetch='fastfetch --config ~/.config/fastfetch/presets/custom'
 
 # =========================
+# STARSHIP PROMPT
+# =========================
+
+eval "$(starship init zsh)"
+# =========================
 # BASIC
 # =========================
+
 export PATH="$HOME/.local/bin:$PATH"
 autoload -Uz colors && colors
 
@@ -20,11 +26,7 @@ setopt SHARE_HISTORY
 setopt AUTO_CD
 setopt CORRECT
 
-# =========================
-# STARSHIP PROMPT
-# =========================
 
-eval "$(starship init zsh)"
 
 # =========================
 # PLUGINS
