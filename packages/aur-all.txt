@@ -9,9 +9,11 @@ fstrcmp
 ifrextractor-ls
 lib32-giflib
 lib32-libdxvk
+lib32-mpg123
 lib32-nvidia-580xx-utils
 lib32-obs-vkcapture
 lib32-openal
+lib32-sdl2-compat
 lib32-v4l-utils
 librewolf-bin
 libxnvctrl-580xx
@@ -32,7 +34,6 @@ prism-tui-bin
 python-pkg_resources
 python-pywal16
 python-pywalfox
-qemu-block-gluster
 qmplay2
 qmplay2-git
 qt5ct-refresh-git

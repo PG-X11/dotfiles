@@ -84,6 +84,7 @@ clang
 cliphist
 cmake
 cmark
+cmatrix
 compiler-rt
 convertlit
 coreutils
@@ -142,6 +143,7 @@ ethtool
 exiv2
 expac
 expat
+extra-cmake-modules
 faad2
 fakeroot
 fastfetch
@@ -202,6 +204,7 @@ glu
 glusterfs
 glycin
 gmp
+gn
 gnome-desktop
 gnome-desktop-common
 gnome-keyring
@@ -253,6 +256,7 @@ gwenview
 gzip
 harfbuzz
 harfbuzz-icu
+hdf5
 hdparm
 helvum
 hicolor-icon-theme
@@ -279,6 +283,7 @@ icu
 iio-sensor-proxy
 ijs
 imagemagick
+imath
 imlib2
 iniparser
 inotify-tools
@@ -286,10 +291,12 @@ intel-gmmlib
 intel-media-driver
 intel-ucode
 intel-undervolt
+intltool
 iproute2
 iptables
 iputils
 iso-codes
+jack2
 jansson
 jasper
 jbig2dec
@@ -399,6 +406,7 @@ lib32-curl
 lib32-dbus
 lib32-e2fsprogs
 lib32-expat
+lib32-flac
 lib32-fontconfig
 lib32-freetype2
 lib32-gamemode
@@ -410,9 +418,11 @@ lib32-glu
 lib32-gmp
 lib32-gnutls
 lib32-icu
+lib32-jack2
 lib32-json-c
 lib32-keyutils
 lib32-krb5
+lib32-libasyncns
 lib32-libdisplay-info
 lib32-libdrm
 lib32-libelf
@@ -428,16 +438,21 @@ lib32-libnghttp2
 lib32-libnghttp3
 lib32-libngtcp2
 lib32-libnm
+lib32-libogg
 lib32-libpciaccess
 lib32-libpipewire
 lib32-libpng
 lib32-libpsl
+lib32-libpulse
+lib32-libsamplerate
 lib32-libsm
+lib32-libsndfile
 lib32-libssh2
 lib32-libtasn1
 lib32-libunistring
 lib32-libusb
 lib32-libva
+lib32-libvorbis
 lib32-libx11
 lib32-libxau
 lib32-libxcb
@@ -461,16 +476,15 @@ lib32-llvm-libs
 lib32-lm_sensors
 lib32-mangohud
 lib32-mesa
-lib32-mpg123
 lib32-ncurses
 lib32-nettle
 lib32-nspr
 lib32-nss
 lib32-openssl
+lib32-opus
 lib32-p11-kit
 lib32-pcre2
 lib32-pipewire
-lib32-sdl2-compat
 lib32-sdl3
 lib32-spirv-tools
 lib32-sqlite
@@ -488,6 +502,7 @@ lib32-zstd
 libaccounts-glib
 libaccounts-qt
 libadwaita
+libaec
 libaemu
 libaio
 libappimage
@@ -527,6 +542,7 @@ libcbor
 libcddb
 libcdio
 libcdio-paranoia
+libcgif
 libclc
 libcloudproviders
 libcolord
@@ -556,6 +572,8 @@ libev
 libevdev
 libevent
 libewf
+libexif
+libexsid
 libfdk-aac
 libffi
 libfontenc
@@ -573,6 +591,7 @@ libgovirt
 libgpg-error
 libgudev
 libguestfs
+libhwasan
 libical
 libice
 libid3tag
@@ -604,6 +623,7 @@ liblqr
 liblsan
 libmakepkg-dropins
 libmanette
+libmatio
 libmatroska
 libmbim
 libmd
@@ -660,6 +680,7 @@ libquadmath
 libraqm
 libraw
 libraw1394
+libresidfp
 librest
 librsvg
 librsync
@@ -719,6 +740,7 @@ libva-nvidia-driver
 libvdpau
 libvdpau-va-gl
 libverto
+libvips
 libvirt
 libvirt-glib
 libvirt-python
@@ -784,10 +806,9 @@ linux-firmware-other
 linux-firmware-radeon
 linux-firmware-realtek
 linux-firmware-whence
-linux-lts
-linux-lts-headers
 linux-zen
 linux-zen-headers
+litehtml
 lld
 llhttp
 llvm
@@ -810,6 +831,7 @@ mailcap
 make
 mangohud
 mbedtls
+mbedtls3
 md4c
 mdadm
 media-player-info
@@ -854,6 +876,7 @@ nspr
 nss
 ntfs-3g
 ntfsprogs
+ntsync-autoload
 numactl
 nvtop
 nwg-look
@@ -868,8 +891,10 @@ openbox
 openbsd-netcat
 opencl-nvidia
 opencore-amr
+openexr
 openh264
 openjpeg2
+openjph
 openrgb
 openssh
 openssl
@@ -935,7 +960,6 @@ pinentry
 pipewire
 pipewire-alsa
 pipewire-audio
-pipewire-jack
 pipewire-pulse
 pixman
 pkcs11-helper
@@ -1054,7 +1078,6 @@ python-protobuf
 python-proton-core
 python-proton-keyring-linux
 python-proton-vpn-api-core
-python-proton-vpn-local-agent
 python-psutil
 python-pycparser
 python-pycurl
@@ -1137,6 +1160,7 @@ qemu-system-alpha-firmware
 qemu-system-arm
 qemu-system-arm-firmware
 qemu-system-avr
+qemu-system-hexagon
 qemu-system-hppa
 qemu-system-hppa-firmware
 qemu-system-loongarch64
@@ -1212,6 +1236,7 @@ rav1e
 rdma-core
 re2
 readline
+reflector
 reuse
 rhash
 ripgrep
@@ -1366,6 +1391,7 @@ vmaf
 volume_key
 vte3
 vte-common
+vulkan-headers
 vulkan-icd-loader
 vulkan-intel
 vulkan-mesa-implicit-layers

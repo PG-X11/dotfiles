@@ -16,6 +16,7 @@ calf
 c-ares
 cava
 cliphist
+cmatrix
 devtools
 dkms
 dolphin
@@ -26,7 +27,9 @@ dotnet-sdk
 dotnet-targeting-pack
 edk2-ovmf
 efibootmgr
+egl-gbm
 egl-wayland
+egl-x11
 electron41
 fastfetch
 fcitx5-configtool
@@ -66,7 +69,6 @@ lib32-libffi
 lib32-libpng
 lib32-mangohud
 lib32-mesa
-lib32-mpg123
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-mesa-layers
@@ -79,8 +81,6 @@ libva-nvidia-driver
 libvdpau-va-gl
 libvirt
 linux-firmware
-linux-lts
-linux-lts-headers
 linux-zen
 linux-zen-headers
 lm_sensors
@@ -103,13 +103,13 @@ okular
 oniguruma
 openal
 openbox
+opencl-nvidia
 openrgb
 os-prober
 pamixer
 pavucontrol
 pipewire
 pipewire-alsa
-pipewire-jack
 pipewire-pulse
 plasma-desktop
 playerctl
@@ -126,6 +126,7 @@ qt5-wayland
 qt6-imageformats
 qt6-wayland
 ranger
+reflector
 rofi
 satty
 scrcpy
