@@ -7,11 +7,9 @@ show_location = false
 time_format = "{:%I:%M}"
 
 [theme]
-builtin = "Catppuccin"
+source         = "custom"
+custom_palette = "colors-noctalia"
 mode = "dark"
-source = "wallpaper"
-wallpaper_scheme = "m3-content"
-
-
 [weather]
 enabled = false
+

@@ -85,9 +85,10 @@ if command -v awww >/dev/null 2>&1; then
         --transition-fps 120 &
 fi
 
-ZED_SCRIPT="/home/a7med/dotfiles/scripts/zed-theme-wal/zed-theme-wal-reload.sh"
-if [ -f "$ZED_SCRIPT" ]; then
-    bash "$ZED_SCRIPT" &
+# Removed zed since its useless
+# Finally update noctalia
+if command -v noctalia >/dev/null 2>&1; then
+    noctalia msg wallpaper-set "$FULL_PATH" &
+    # noctalia msg color-scheme-set custom colors-noctalia
 fi
-
 exit 0

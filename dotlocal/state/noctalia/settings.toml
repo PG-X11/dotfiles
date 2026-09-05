@@ -1,4 +1,4 @@
-config_version = 8
+config_version = 13
 
 [bar.default]
 background_opacity = 0.88999998010694981
@@ -6,8 +6,9 @@ border = "primary"
 capsule_border = "tertiary"
 capsule_padding = 15.0
 capsule_thickness = 0.71999998763203621
+center = [ "cat", "clock" ]
 concave_edge_corners = false
-end = [ "media", "network", "group:g2" ]
+end = [ "audio_visualizer", "media", "network", "group:g2" ]
 font_family = "Noto Kufi Arabic"
 font_weight = 300
 margin_ends = 17
@@ -15,11 +16,13 @@ padding = 11
 radius = 13
 scale = 1.2000000104308128
 shadow = false
-start = [ "group:g1", "workspaces" ]
+start = [ "group:g1", "workspaces", "privacy" ]
 thickness = 32
-widget_spacing = 9
+widget_spacing = 11
 
     [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
     border = ""
     enabled = true
     fill = "surface_variant"
@@ -29,6 +32,8 @@ widget_spacing = 9
     padding = 8.0
 
     [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
     border = ""
     enabled = true
     fill = "surface_variant"
@@ -48,6 +53,9 @@ widget_order = []
 
     [desktop_widgets.widget]
 
+[hooks]
+wallpaper_changed = "ln -sfn ~/.cache/wal/noctalia-colors.json ~/.local/state/noctalia/community-paletts/wal.json && noctalia msg color-scheme-set community wal"
+
 [lockscreen_widgets]
 enabled = false
 schema_version = 2
@@ -64,6 +72,8 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     cx = 800.0
     cy = 718.0
     output = "HDMI-A-1"
+    placement_height = 0.0
+    placement_width = 0.0
     rotation = 0.0
     type = "login_box"
 
@@ -89,6 +99,8 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     cx = 800.0
     cy = 718.0
     output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1600.0
     rotation = 0.0
     type = "login_box"
 
@@ -108,6 +120,9 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[plugins]
+enabled = [ "dotnetrob/cat", "liamwh/emoji-picker", "tordex/nvtop" ]
+
 [shell]
 avatar_path = "/home/a7med/.face"
 show_location = false
@@ -124,23 +139,28 @@ time_format = "{:%I:%M}"
 
 [theme]
 builtin = "Catppuccin"
+custom_palette = "colors-noctalia"
 mode = "dark"
+source = "wallpaper"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
 
 [wallpaper.last]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Leaves-hard-pixelated.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
 
 [weather]
 enabled = false
+
+[widget.cat]
+type = "dotnetrob/cat:cat"
 
 [widget.clock]
 format = "{:%I:%M}"

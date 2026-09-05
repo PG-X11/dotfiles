@@ -115,3 +115,6 @@ sadly did not keep track of them so if you find something yours tell me and I wi
 Making a favorite app menu (I love rofi),
 finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
 find a good cli configurable music player, something like cliamp but more configurable 
+### Notes
+
+Udev rule created for igpu and dgpu, symlinked as igpu and dgpu 

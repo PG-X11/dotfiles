@@ -84,5 +84,9 @@ fi
         [ -f "$QTCT_SRC/qt6ct.conf" ] && cp "$QTCT_SRC/qt6ct.conf" "$QT6_DEST"
     fi
 ) &
-
+# Finally update noctalia
+if command -v noctalia >/dev/null 2>&1; then
+    noctalia msg wallpaper-set "$FULL_PATH" &
+    # noctalia msg color-scheme-set custom colors-noctalia
+fi
 exit 0
