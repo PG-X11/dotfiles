@@ -79,6 +79,7 @@ cblas
 cdparanoia
 cdrtools
 cfitsio
+chromaprint
 cifs-utils
 clang
 cliphist
@@ -86,6 +87,7 @@ cmake
 cmark
 cmatrix
 compiler-rt
+confuse
 convertlit
 coreutils
 cpio
@@ -144,6 +146,7 @@ exiv2
 expac
 expat
 extra-cmake-modules
+faac
 faad2
 fakeroot
 fastfetch
@@ -231,10 +234,12 @@ gsl
 gsm
 gssdp
 gst-plugin-pipewire
+gst-plugins-bad
 gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
+gst-plugins-ugly
 gst-plugin-va
 gstreamer
 gtest
@@ -278,6 +283,8 @@ hyprutils
 hyprwayland-scanner
 hyprwire
 i2c-tools
+i3status
+i3-wm
 iana-etc
 icu
 iio-sensor-proxy
@@ -516,6 +523,7 @@ libatasmart
 libatomic
 libavc1394
 libavif
+libavtp
 libb2
 libblake3
 libblockdev
@@ -553,6 +561,9 @@ libdatachannel
 libdatrie
 libdbusmenu-glib
 libdbusmenu-gtk3
+libdc1394
+libdca
+libde265
 libdecor
 libdeflate
 libdisplay-info
@@ -620,18 +631,23 @@ libldac
 libldap
 liblouis
 liblqr
+liblrdf
 liblsan
+libltc
 libmakepkg-dropins
 libmanette
 libmatio
 libmatroska
 libmbim
 libmd
+libmicrodns
 libmm-glib
 libmng
 libmnl
 libmodplug
 libmpc
+libmpcdec
+libmpeg2
 libmspack
 libmtp
 libmysofa
@@ -841,6 +857,7 @@ mesa-utils
 meson
 milou
 minizip
+mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mobile-broadband-provider-info
@@ -855,6 +872,7 @@ muparser
 nano
 ncurses
 ndctl
+neon
 nettle
 nettle3
 networkmanager
@@ -887,7 +905,6 @@ okular
 onetbb
 oniguruma
 openal
-openbox
 openbsd-netcat
 opencl-nvidia
 opencore-amr
@@ -956,6 +973,7 @@ perl-xml-parser
 phodav
 phonon-qt6
 phonon-qt6-vlc
+picom
 pinentry
 pipewire
 pipewire-alsa
@@ -1232,6 +1250,7 @@ qt6-webchannel
 qt6-webengine
 qt6-websockets
 ranger
+raptor
 rav1e
 rdma-core
 re2
@@ -1248,6 +1267,7 @@ rpm-sequoia
 rpm-tools
 rsync
 rtkit
+rtmpdump
 rubberband
 rust
 rutabaga-ffi
@@ -1408,6 +1428,7 @@ webrtc-audio-processing-1
 wev
 wget
 which
+wildmidi
 wine-staging
 wireguard-tools
 wireplumber
@@ -1430,6 +1451,7 @@ xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
+xcb-util-xrm
 xcur2png
 xdg-dbus-proxy
 xdg-desktop-portal
@@ -1457,11 +1479,13 @@ xorg-xwayland
 xvidcore
 xxhash
 xz
+yajl
 yara
 yoga
 yt-dlp
 yt-dlp-ejs
 yyjson
+zbar
 zed
 zenity
 zeromq
@@ -1476,4 +1500,5 @@ zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 zstd
+zvbi
 zxing-cpp
