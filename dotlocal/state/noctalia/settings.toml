@@ -69,11 +69,11 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 800.0
+    cx = 800.00006103515625
     cy = 718.0
     output = "HDMI-A-1"
-    placement_height = 0.0
-    placement_width = 0.0
+    placement_height = 900.0
+    placement_width = 1600.0
     rotation = 0.0
     type = "login_box"
 
@@ -96,7 +96,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
     box_width = 810.0
-    cx = 800.0
+    cx = 800.00006103515625
     cy = 718.0
     output = "eDP-1"
     placement_height = 900.0
@@ -145,16 +145,16 @@ source = "wallpaper"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
+path = "/home/a7med/.local/share/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
 
 [wallpaper.last]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
+path = "/home/a7med/.local/share/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Leaves-hard-pixelated.png"
+path = "/home/a7med/.local/share/colorschemes/nordic-blue/wallpapers/Mountian-range.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Computer.jpg"
+path = "/home/a7med/.local/share/colorschemes/nordic-blue/wallpapers/Wave-dark.png"
 
 [weather]
 enabled = false

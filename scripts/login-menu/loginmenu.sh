@@ -38,7 +38,7 @@ echo -e "${w}"
 # 1. Print the menu choices on the screen
 echo -e " ${g}1)${w} launch hyprland (Normal)"
 echo -e " ${g}2)${w} launch hyprland (UWSM)"
-echo -e " ${g}3)${w} launch openbox (X11)"
+echo -e " ${g}3)${w} launch I3wm (X11)"
 echo -e " ${g}4)${w} launch KDE (Wayland)"
 echo -e " ${g}e)${w} Exit"
 echo -e " ${r}x)${w} poweroff"
