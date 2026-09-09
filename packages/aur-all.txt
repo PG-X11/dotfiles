@@ -6,6 +6,7 @@ cliamp-bin
 dxvk-bin
 easyeffects-git
 fstrcmp
+hyprlang2lua
 ifrextractor-ls
 lib32-giflib
 lib32-libdxvk
@@ -42,4 +43,5 @@ stacer-bin
 tty-clock
 uefitool-git
 wayscriber-bin
+wayscriber-configurator
 win2xcur

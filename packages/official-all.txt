@@ -215,6 +215,7 @@ gnome-sound-recorder
 gnulib-l10n
 gnupg
 gnutls
+go
 gobject-introspection-runtime
 gparted
 gperftools
