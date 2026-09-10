@@ -35,6 +35,7 @@ fastfetch
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
+ffmpeg4.4
 ffmpegthumbs
 foliate
 fuse2
@@ -68,6 +69,7 @@ kitty
 konsole
 kservice5
 kvantum-qt5
+less
 lib32-gamemode
 lib32-libffi
 lib32-libpng

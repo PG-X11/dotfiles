@@ -6,7 +6,7 @@ please **do not expect this to work for every single device out there**,
 again this was made for a dell precision 7530 with an intel CPU and an NVIDIA gpu
 
 also note that **some tools and scripts were made by AI!**, ofcourse rechecked and validated by me (a human if you couldn't tell *lol*) and I made sure they work although some of them are under development 
-check [Caution.txt](Caution.txt)
+check [Caution.txt](/assets/Caution.txt)
 ### Features : 
 - these dotfiles come with many nice features such as :
 - theme switcher (using rofi)

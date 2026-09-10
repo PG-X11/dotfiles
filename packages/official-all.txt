@@ -155,6 +155,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-qt
 ffmpeg
+ffmpeg4.4
 ffmpegthumbs
 fftw
 file
@@ -406,6 +407,7 @@ layer-shell-qt
 lcms2
 ldb
 leancrypto
+less
 lib32-alsa-lib
 lib32-alsa-plugins
 lib32-brotli
@@ -641,6 +643,7 @@ libmatio
 libmatroska
 libmbim
 libmd
+libmfx
 libmicrodns
 libmm-glib
 libmng
