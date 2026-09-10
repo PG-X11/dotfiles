@@ -6,15 +6,15 @@ user_option=$(printf "preset-1\npreset-2\npreset-3\npreset-4\ndefault-preset" | 
 )
 
 if [[ "$user_option" == "preset-1" ]]; then
-    ln -sfn $work_dir/presets/preset-1.lua $work_dir/current-preset.lua
+    ln -sfn $work_dir/presets/preset-1.conf $work_dir/current-preset.conf
 elif [[ "$user_option" == "preset-2" ]]; then
-    ln -sfn $work_dir/presets/preset-2.lua $work_dir/current-preset.lua
+    ln -sfn $work_dir/presets/preset-2.conf $work_dir/current-preset.conf
 elif [[ "$user_option" == "preset-3" ]]; then
-    ln -sfn $work_dir/presets/preset-3.lua $work_dir/current-preset.lua
+    ln -sfn $work_dir/presets/preset-3.conf $work_dir/current-preset.conf
 elif [[ "$user_option" == "preset-4" ]]; then
-    ln -sfn $work_dir/presets/preset-4.lua $work_dir/current-preset.lua
+    ln -sfn $work_dir/presets/preset-4.conf $work_dir/current-preset.conf
 elif [[ "$user_option" == "default-preset" ]]; then
-    cp $work_dir/presets/empty-preset.lua $work_dir/current-preset.lua
+    cp $work_dir/presets/empty-preset.conf $work_dir/current-preset.conf
 else
     echo "user aborted "
     # notify-send "ERR - user did not input! " "did you esc?"

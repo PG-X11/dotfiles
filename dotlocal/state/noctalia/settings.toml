@@ -145,16 +145,16 @@ source = "wallpaper"
 wallpaper_scheme = "m3-monochrome"
 
 [wallpaper.default]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Maid.png"
 
 [wallpaper.last]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Maid.png"
 
 [wallpaper.monitors.HDMI-A-1]
 path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Maid.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Moon.png"
+path = "/home/a7med/.local/share/colorschemes/gruvbox/wallpapers/Maid.png"
 
 [weather]
 enabled = false
