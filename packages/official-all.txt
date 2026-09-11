@@ -684,6 +684,7 @@ libpcap
 libpciaccess
 libpfm
 libpgm
+libpipeline
 libpipewire
 libplacebo
 libplasma
@@ -849,6 +850,7 @@ lzo
 m4
 mailcap
 make
+man-db
 mangohud
 mbedtls
 mbedtls3

@@ -91,6 +91,7 @@ linux-zen
 linux-zen-headers
 lm_sensors
 lutris
+man-db
 mangohud
 minizip
 mpv
