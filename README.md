@@ -17,7 +17,7 @@ check [Caution.txt](/assets/Caution.txt)
 ### Installation :
 to install simply run this (ofcourse you need to have git installed)
 ```
-git clone https://github.com/PG-X11/dotfiles.git
+git clone --depth 1 https://github.com/PG-X11/dotfiles.git
 cd dotfiles/scripts
 ./install.sh
 ```
