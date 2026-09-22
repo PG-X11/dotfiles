@@ -114,10 +114,10 @@ sadly did not keep track of them so if you find something yours tell me and I wi
 > [Noctalia shell](https://github.com/noctalia-dev/noctalia)
 ### To-Do
 
-- Making a favorite app menu (I love rofi),
-- finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
-- find a good cli configurable music player, something like cliamp but more configurable 
-- add hyprland plugins to the repo 
+- [ ] Making a favorite app menu (I love rofi),
+- [ ] finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
+- [ ] find a good cli configurable music player, something like cliamp but more configurable 
+- [ ] add hyprland plugins to the repo 
 
-> **NOTES**
-> Udev rule created for igpu and dgpu, symlinked as igpu and dgpu 
+- **NOTES**
+ - Udev rule created for igpu and dgpu, symlinked as igpu and dgpu 
