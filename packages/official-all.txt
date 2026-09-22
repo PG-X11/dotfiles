@@ -145,7 +145,6 @@ ethtool
 exiv2
 expac
 expat
-extra-cmake-modules
 faac
 faad2
 fakeroot
@@ -208,7 +207,6 @@ glu
 glusterfs
 glycin
 gmp
-gn
 gnome-desktop
 gnome-desktop-common
 gnome-keyring
@@ -216,7 +214,6 @@ gnome-sound-recorder
 gnulib-l10n
 gnupg
 gnutls
-go
 gobject-introspection-runtime
 gparted
 gperftools
@@ -300,7 +297,6 @@ intel-gmmlib
 intel-media-driver
 intel-ucode
 intel-undervolt
-intltool
 iproute2
 iptables
 iputils
@@ -516,7 +512,6 @@ libaec
 libaemu
 libaio
 libappimage
-libappindicator
 libarchive
 libasan
 libass
@@ -562,8 +557,6 @@ libcups
 libdaemon
 libdatachannel
 libdatrie
-libdbusmenu-glib
-libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
@@ -852,7 +845,6 @@ mailcap
 make
 man-db
 mangohud
-mbedtls
 mbedtls3
 md4c
 mdadm
@@ -1417,7 +1409,6 @@ vmaf
 volume_key
 vte3
 vte-common
-vulkan-headers
 vulkan-icd-loader
 vulkan-intel
 vulkan-mesa-implicit-layers

@@ -36,12 +36,13 @@ echo -e "${w}"
 
 
 # 1. Print the menu choices on the screen
-echo -e " ${g}1)${w} launch hyprland (Normal)"
-echo -e " ${g}2)${w} launch hyprland (UWSM)"
-echo -e " ${g}3)${w} launch I3wm (X11)"
-echo -e " ${g}4)${w} launch KDE (Wayland)"
+echo -e " ${g}1)${w} Launch hyprland (Normal)"
+echo -e " ${g}2)${w} Launch hyprland (UWSM)"
+echo -e " ${g}3)${w} Launch I3wm (X11)"
+echo -e " ${g}4)${w} Launch KDE (Wayland)"
+echo -e " ${g}5)${r} EXPERIMENTAL${w} launch Gaming mode"
 echo -e " ${g}e)${w} Exit"
-echo -e " ${r}x)${w} poweroff"
+echo -e " ${r}x)${w} Poweroff"
 
 echo
 echo
@@ -63,7 +64,9 @@ case "$choice" in
     "4")
         clear && exec dbus-run-session startplasma-wayland
         ;;
-
+    "5")
+        clear && exec /home/a7med/dotfiles/scripts/login-menu/Gamemode.sh
+        ;;
     "e")
         exit 0
         ;;

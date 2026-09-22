@@ -3,6 +3,7 @@ aseprite
 asp
 catppuccin-mocha-grub-theme-git
 cliamp-bin
+downgrade
 dxvk-bin
 easyeffects-git
 fstrcmp

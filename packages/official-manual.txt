@@ -16,6 +16,7 @@ calf
 c-ares
 cava
 cliphist
+cmake
 cmatrix
 devtools
 dkms
