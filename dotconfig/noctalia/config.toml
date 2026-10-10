@@ -1,7 +1,7 @@
 [wallpaper]
 enabled = false
 config_version = 8
-
+directory = ""
 [shell]
 show_location = false
 time_format = "{:%I:%M}"

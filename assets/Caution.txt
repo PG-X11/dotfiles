@@ -13,7 +13,7 @@ scripts that are AI made :
 - the package tracker in /scripts/pkg-tracker (which is super simple so its fine, could've made it myself but I do not want to waste time)
 - github hook for pkg tracker 
 - the installer for the dotfiles (sorry guys I am tired)
-
+- clipboard filter script
 these are all the AI vibe coded stuff in the dotfiles
 TO BE REPLACED
 BEGONE AI

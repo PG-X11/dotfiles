@@ -112,12 +112,14 @@ cant really credit all the sources for the wallpapers, and other things I forked
 sadly did not keep track of them so if you find something yours tell me and I will gladly credit you here ! 
 
 > [Noctalia shell](https://github.com/noctalia-dev/noctalia)
+> [Clipboard script](https://github.com/sentriz/cliphist/blob/master/contrib/cliphist-rofi-img)
 ### To-Do
 
 - [ ] Making a favorite app menu (I love rofi),
 - [ ] finish the themes and add a new theme called 'neon' or 'futuristic' or 'cyberpunk'
 - [ ] find a good cli configurable music player, something like cliamp but more configurable 
 - [ ] add hyprland plugins to the repo 
+
 
 - **NOTES**
  - Udev rule created for igpu and dgpu, symlinked as igpu and dgpu 
