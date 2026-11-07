@@ -9,3 +9,5 @@ dotlocal/state/noctalia/notification_history.json
 dotlocal/state/noctalia/plugin-cache
 dotlocal/state/noctalia/community-templates
 dotlocal/state/noctalia/plugins
+# hicolor icons
+dotlocal/share/icons/hicolor
