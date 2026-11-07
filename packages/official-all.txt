@@ -5,6 +5,7 @@ abseil-cpp
 accountsservice
 acl
 ada
+adsb_deku
 adwaita-cursors
 adwaita-fonts
 adwaita-icon-theme
@@ -87,7 +88,9 @@ cmake
 cmark
 cmatrix
 compiler-rt
+composefs
 confuse
+containerd
 convertlit
 coreutils
 cpio
@@ -112,18 +115,23 @@ device-mapper
 devtools
 diffutils
 discount
+diskonaut
 djvulibre
 dkms
+docker
 dolphin
 dosfstools
 dotnet-host
 dotnet-runtime
 dotnet-runtime-8.0
 dotnet-sdk
+dotnet-sdk-8.0
 dotnet-targeting-pack
+dotnet-targeting-pack-8.0
 double-conversion
 dtc
 duktape
+dump1090_rs
 dvd+rw-tools
 e2fsprogs
 ebook-tools
@@ -136,6 +144,7 @@ efivar
 eglexternalplatform
 egl-gbm
 egl-wayland
+egl-wayland2
 egl-x11
 electron41
 elfutils
@@ -145,6 +154,7 @@ ethtool
 exiv2
 expac
 expat
+extra-cmake-modules
 faac
 faad2
 fakeroot
@@ -161,6 +171,7 @@ file
 filesystem
 findutils
 flac
+flatpak
 flex
 fluidsynth
 fmt
@@ -207,6 +218,7 @@ glu
 glusterfs
 glycin
 gmp
+gn
 gnome-desktop
 gnome-desktop-common
 gnome-keyring
@@ -214,6 +226,7 @@ gnome-sound-recorder
 gnulib-l10n
 gnupg
 gnutls
+go
 gobject-introspection-runtime
 gparted
 gperftools
@@ -297,6 +310,7 @@ intel-gmmlib
 intel-media-driver
 intel-ucode
 intel-undervolt
+intltool
 iproute2
 iptables
 iputils
@@ -631,6 +645,7 @@ liblrdf
 liblsan
 libltc
 libmakepkg-dropins
+libmalcontent
 libmanette
 libmatio
 libmatroska
@@ -666,6 +681,7 @@ libnma-gtk4
 libnotify
 libnsl
 libntfs-3g
+libnvidia-container
 libnvme
 libobjc
 libogg
@@ -673,6 +689,7 @@ libopenmpt
 libosinfo
 libp11-kit
 libpaper
+libpathrs
 libpcap
 libpciaccess
 libpfm
@@ -809,6 +826,7 @@ licenses
 lilv
 linux-api-headers
 linux-firmware
+linux-firmware-amd
 linux-firmware-amdgpu
 linux-firmware-atheros
 linux-firmware-broadcom
@@ -819,6 +837,7 @@ linux-firmware-nvidia
 linux-firmware-other
 linux-firmware-radeon
 linux-firmware-realtek
+linux-firmware-ti
 linux-firmware-whence
 linux-zen
 linux-zen-headers
@@ -854,6 +873,7 @@ mesa
 mesa-utils
 meson
 milou
+ministream
 minizip
 mjpegtools
 mkinitcpio
@@ -871,6 +891,7 @@ nano
 ncurses
 ndctl
 neon
+netstandard-targeting-pack
 nettle
 nettle3
 networkmanager
@@ -894,6 +915,7 @@ ntfs-3g
 ntfsprogs
 ntsync-autoload
 numactl
+nvidia-container-toolkit
 nvtop
 nwg-look
 obs-studio
@@ -920,6 +942,7 @@ opusfile
 orc
 osinfo-db
 os-prober
+ostree
 p11-kit
 pacman
 pacman-contrib
@@ -1024,6 +1047,7 @@ python-blinker
 python-boolean.py
 python-brotli
 python-cairo
+python-catalogus
 python-certifi
 python-cffi
 python-charset-normalizer
@@ -1121,6 +1145,7 @@ python-tomlkit
 python-tqdm
 python-typing_extensions
 python-urllib3
+python-vcsgraph
 python-waitress
 python-wand
 python-werkzeug
@@ -1267,6 +1292,7 @@ rsync
 rtkit
 rtmpdump
 rubberband
+runc
 rust
 rutabaga-ffi
 satty
@@ -1299,6 +1325,7 @@ smartmontools
 smbclient
 snappy
 sndio
+soapysdr
 sof-firmware
 solid
 sonnet
@@ -1457,6 +1484,7 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-user-dirs
 xdg-utils
+xdg-utils-cxx
 xf86-input-libinput
 xkeyboard-config
 xorg-fonts-encodings

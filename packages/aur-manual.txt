@@ -7,6 +7,7 @@ downgrade
 dxvk-bin
 easyeffects-git
 fstrcmp
+gloview-git
 hyprlang2lua
 ifrextractor-ls
 lib32-giflib
@@ -42,3 +43,4 @@ uefitool-git
 wayscriber-bin
 wayscriber-configurator
 win2xcur
+zinkrun

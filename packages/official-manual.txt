@@ -1,3 +1,4 @@
+adsb_deku
 ananicy-cpp
 anki
 arch-install-scripts
@@ -19,7 +20,9 @@ cliphist
 cmake
 cmatrix
 devtools
+diskonaut
 dkms
+docker
 dolphin
 dotnet-host
 dotnet-runtime
@@ -38,6 +41,7 @@ fcitx5-gtk
 fcitx5-qt
 ffmpeg4.4
 ffmpegthumbs
+flatpak
 foliate
 fuse2
 fzf
@@ -104,6 +108,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
 ntfsprogs
+nvidia-container-toolkit
 nvtop
 nwg-look
 obs-studio

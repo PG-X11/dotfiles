@@ -7,6 +7,7 @@ downgrade
 dxvk-bin
 easyeffects-git
 fstrcmp
+gloview-git
 hyprlang2lua
 ifrextractor-ls
 lib32-giflib
@@ -15,6 +16,7 @@ lib32-mpg123
 lib32-nvidia-580xx-utils
 lib32-obs-vkcapture
 lib32-openal
+lib32-portaudio
 lib32-sdl2-compat
 lib32-v4l-utils
 librewolf-bin
@@ -44,3 +46,4 @@ uefitool-git
 wayscriber-bin
 wayscriber-configurator
 win2xcur
+zinkrun
