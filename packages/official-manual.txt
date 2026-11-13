@@ -1,6 +1,5 @@
 adsb_deku
 ananicy-cpp
-anki
 arch-install-scripts
 archlinux-xdg-menu
 ark

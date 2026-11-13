@@ -17,7 +17,6 @@ alsa-topology-conf
 alsa-ucm-conf
 ananicy-cpp
 android-tools
-anki
 aom
 appstream
 appstream-qt
@@ -1043,7 +1042,6 @@ python-bcc
 python-bcrypt
 python-beautifulsoup4
 python-binaryornot
-python-blinker
 python-boolean.py
 python-brotli
 python-cairo
@@ -1062,7 +1060,6 @@ python-dateutil
 python-dbus
 python-dbus-fast
 python-debian
-python-decorator
 python-distro
 python-dnspython
 python-dulwich
@@ -1071,8 +1068,6 @@ python-eventlet
 python-fastbencode
 python-fido2
 python-filelock
-python-flask
-python-flask-cors
 python-fonttools
 python-frozenlist
 python-gevent
@@ -1081,7 +1076,6 @@ python-gobject
 python-greenlet
 python-idna
 python-importlib-metadata
-python-itsdangerous
 python-jaraco.classes
 python-jaraco.collections
 python-jaraco.context
@@ -1089,14 +1083,11 @@ python-jaraco.functools
 python-jaraco.text
 python-jeepney
 python-jinja
-python-jsonschema
-python-jsonschema-specifications
 python-keyring
 python-kiwisolver
 python-license-expression
 python-linux-procfs
 python-lxml
-python-markdown
 python-markdown-it-py
 python-markupsafe
 python-matplotlib
@@ -1106,7 +1097,6 @@ python-moddb
 python-more-itertools
 python-multidict
 python-numpy
-python-orjson
 python-packaging
 python-patiencediff
 python-pefile
@@ -1114,7 +1104,6 @@ python-pillow
 python-pip
 python-platformdirs
 python-propcache
-python-protobuf
 python-proton-core
 python-proton-keyring-linux
 python-proton-vpn-api-core
@@ -1125,18 +1114,11 @@ python-pygments
 python-pynacl
 python-pyopenssl
 python-pyparsing
-python-pyqt6
-python-pyqt6-sip
-python-pyqt6-webengine
-python-pysocks
 python-pyudev
 python-pyxdg
-python-referencing
 python-requests
 python-rich
-python-rpds-py
 python-secretstorage
-python-send2trash
 python-sentry_sdk
 python-setuptools
 python-six
@@ -1146,9 +1128,7 @@ python-tqdm
 python-typing_extensions
 python-urllib3
 python-vcsgraph
-python-waitress
 python-wand
-python-werkzeug
 python-wheel
 python-yaml
 python-yarl
