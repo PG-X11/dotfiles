@@ -9,9 +9,9 @@ pipes.sh
 
 
 
-paru
+paru-bin
 
 
-7z
+7zip
 
 noctalia

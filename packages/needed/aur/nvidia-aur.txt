@@ -6,7 +6,6 @@ nvidia-580xx-settings
 lib32-nvidia-580xx-utils
 
 
-lib32-egl-wayland
 
 libxnvctrl-580xx
 
