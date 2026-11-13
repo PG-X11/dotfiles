@@ -18,6 +18,9 @@ PACKAGE_DIR="$DOTFILES/packages/needed"
 OFFICIAL_DIR="$PACKAGE_DIR/official"
 AUR_DIR="$PACKAGE_DIR/aur"
 BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
+PACMAN_CONF="${PACMAN_CONF:-/etc/pacman.conf}"
+SYS_DRM_DIR="${SYS_DRM_DIR:-/sys/class/drm}"
+UDEV_RULES_DIR="${UDEV_RULES_DIR:-/etc/udev/rules.d}"
 
 # Basic terminal colors for readable output
 C_RESET='\033[0m'
@@ -61,12 +64,21 @@ if [ ! -d "$DOTFILES/dotconfig" ] || [ ! -d "$DOTFILES/dotlocal" ]; then
     err "Dotfiles directories not found in $DOTFILES. Make sure the script is inside the repository."
 fi
 
-# Keep sudo alive while the script runs so long builds do not time out
+# Keep sudo alive while the script runs and clean up the background loop on exit
 sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+(while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null) &
+SUDO_KEEPALIVE_PID=$!
+trap 'kill "$SUDO_KEEPALIVE_PID" 2>/dev/null || true' EXIT
 
 # Enable [multilib] in /etc/pacman.conf if it is still commented out.
-# Required by lib32-* packages in performance-of)R packages
+# Required by lib32-* packages in performance-official.txt and nvidia-aur.txt.
+if [ -f "$PACMAN_CONF" ] && ! grep -q "^\[multilib\]" "$PACMAN_CONF"; then
+    msg "Enabling [multilib] repository in $PACMAN_CONF..."
+    sudo sed -i '/^\s*#\s*\[multilib\]/,/^\s*#\s*Include/ s/^\s*#//' "$PACMAN_CONF"
+    sudo pacman -Sy
+fi
+
+# Install base-devel and git first so we can build AUR packages
 msg "Checking build dependencies..."
 sudo pacman -S --needed --noconfirm base-devel git
 
@@ -98,10 +110,12 @@ if ! command -v paru &>/dev/null; then
     rm -rf /tmp/paru-bin
 fi
 
-# Detect GPU hardware so the script works on both NVIDIA hybrid laptops (like Dell Precision 7530/7730)
-# and similar laptops that may use AMD or Intel-only graphics.
+# Detect GPU hardware via sysfs or lspci so the script works on both NVIDIA hybrid laptops
+# (like Dell Precision 7530/7730) and similar laptops using AMD or Intel-only graphics.
 HAS_NVIDIA=0
-if lspci | grep -qi "nvidia"; then
+if grep -qi "0x10de" /sys/bus/pci/devices/*/vendor 2>/dev/null || \
+   grep -qi "0x10de" "$SYS_DRM_DIR"/card*/device/vendor 2>/dev/null || \
+   { command -v lspci &>/dev/null && lspci | grep -qi "nvidia"; }; then
     HAS_NVIDIA=1
     msg "NVIDIA GPU detected."
 else
@@ -121,7 +135,8 @@ install_pkg_file() {
         return 0
     fi
 
-    mapfile -t pkgs < <(grep -vE '^\s*(#|$)' "$file" | tr -s '[:space:]' '\n' | grep -vE '^\s*$')
+    local pkgs=()
+    mapfile -t pkgs < <(awk '{gsub(/#.*/, ""); for (i = 1; i <= NF; i++) print $i}' "$file")
     if [ "${#pkgs[@]}" -eq 0 ]; then
         msg "Skipping $base (empty package list)."
         return 0
@@ -151,45 +166,60 @@ if [ -d "$AUR_DIR" ]; then
     done
 fi
 
-# Back up any existing real file or directory before replacing it with a symlink
+# Back up any existing real file or mismatched symlink before replacing it
 link_item() {
     local src="$1"
     local dst="$2"
 
-    # If destination exists and is not already a symlink to src, move it to the backup folder
     if [ -e "$dst" ] || [ -L "$dst" ]; then
         local current_target=""
         if [ -L "$dst" ]; then
             current_target="$(readlink "$dst")"
         fi
         if [ "$current_target" != "$src" ]; then
-            mkdir -p "$BACKUP_DIR"
-            mv "$dst" "$BACKUP_DIR/$(basename "$dst").$(date +%s)"
+            local rel_path="${dst#"$HOME"/}"
+            local backup_target="$BACKUP_DIR/$rel_path"
+            mkdir -p "$(dirname "$backup_target")"
+            mv "$dst" "$backup_target"
         fi
     fi
 
     ln -sfn "$src" "$dst"
 }
 
-# Prepare user directories required by Hyprland, Noctalia, and theme scripts
+# Prepare user directories required by Hyprland, Noctalia, and theme scripts.
+# Note: ~/.local/bin and ~/.local/state are created as symlinks below, not empty directories here.
 msg "Creating user configuration and cache directories..."
 mkdir -p \
     "$HOME/.config" \
-    "$HOME/.local/bin" \
     "$HOME/.local/share" \
-    "$HOME/.local/state" \
     "$HOME/.cache/colorschemes" \
     "$HOME/.cache/wallpaper-previews"
 
-# Replace hardcoded /home/a7med paths in repository scripts and configs with the current user's paths
+# Replace hardcoded /home/a7med paths in regular files (skipping .git and symlinks so symlinks are not overwritten)
 msg "Updating hardcoded paths in configs and scripts to match $HOME..."
 while IFS= read -r -d '' file; do
-    sed -i \
-        -e "s|/home/a7med/dotfiles|$DOTFILES|g" \
-        -e "s|/home/a7med/Bookmarks/hypr|$DOTFILES/dotconfig/hypr|g" \
-        -e "s|/home/a7med|$HOME|g" \
-        "$file"
-done < <(grep -RIlZ "/home/a7med" "$DOTFILES/dotconfig" "$DOTFILES/dotlocal" "$DOTFILES/home" "$DOTFILES/scripts" 2>/dev/null || true)
+    if grep -q "/home/a7med" "$file" 2>/dev/null; then
+        sed -i \
+            -e "s|/home/a7med/dotfiles|$DOTFILES|g" \
+            -e "s|/home/a7med/Bookmarks/hypr|$DOTFILES/dotconfig/hypr|g" \
+            -e "s|/home/a7med|$HOME|g" \
+            "$file"
+    fi
+done < <(find "$DOTFILES/dotconfig" "$DOTFILES/dotlocal" "$DOTFILES/home" "$DOTFILES/scripts" -type f -print0 2>/dev/null)
+
+# Rewrite any symlinks inside the repository that still point to /home/a7med/...
+# Covers dotlocal/bin/*, dotconfig/hypr/colors/colors.conf, dotconfig/rofi/style.rasi, and current-preset.conf.
+msg "Updating repository symlinks to match $DOTFILES and $HOME..."
+while IFS= read -r -d '' link; do
+    target="$(readlink "$link")"
+    if [[ "$target" == /home/a7med* ]]; then
+        new_target="$target"
+        new_target="${new_target/#\/home\/a7med\/dotfiles/$DOTFILES}"
+        new_target="${new_target/#\/home\/a7med/$HOME}"
+        ln -sfn "$new_target" "$link"
+    fi
+done < <(find "$DOTFILES" -path "$DOTFILES/.git" -prune -o -type l -print0 2>/dev/null)
 
 # Link everything inside dotconfig/ into ~/.config/
 msg "Linking ~/.config files..."
@@ -198,7 +228,7 @@ for item in "$DOTFILES/dotconfig"/*; do
     link_item "$item" "$HOME/.config/$(basename "$item")"
 done
 
-# Link dotlocal subdirectories (share, state) while handling bin and share/icons cleanly
+# Link dotlocal subdirectories (bin, state, and contents of share)
 msg "Linking ~/.local files and colorschemes..."
 for item in "$DOTFILES/dotlocal"/*; do
     name="$(basename "$item")"
@@ -227,31 +257,6 @@ for item in "$DOTFILES/home"/*; do
 done
 shopt -u dotglob nullglob
 
-# Repair symlinks inside dotlocal/bin/ that originally pointed to /home/a7med/dotfiles/...
-msg "Fixing script symlinks in ~/.local/bin..."
-declare -A BIN_LINKS=(
-    ["artapps"]="$DOTFILES/dotconfig/hypr/scripts/artapps/artapps.sh"
-    ["colorpicker"]="$DOTFILES/dotconfig/hypr/scripts/screenshot/colorpicker.sh"
-    ["envswitcher"]="$DOTFILES/scripts/envswitcher/envswitcher.sh"
-    ["game-off"]="$DOTFILES/dotconfig/hypr/scripts/gaming-mode/game-off.sh"
-    ["game-on"]="$DOTFILES/dotconfig/hypr/scripts/gaming-mode/game-on.sh"
-    ["gamemode-controller"]="$DOTFILES/dotconfig/hypr/scripts/gaming-mode/gamemode-controller.sh"
-    ["loginm"]="$DOTFILES/scripts/login-menu/loginmenu.sh"
-    ["monitorscrshot"]="$DOTFILES/dotconfig/hypr/scripts/screenshot/monitorscrshot.sh"
-    ["preset-switcher"]="$DOTFILES/dotconfig/hypr/scripts/hypr-options/preset.sh"
-    ["screenshot"]="$DOTFILES/dotconfig/hypr/scripts/screenshot/screenshot.sh"
-    ["themeswitcher"]="$DOTFILES/dotconfig/hypr/scripts/ThemeSwitcher/themeswitcher.sh"
-    ["thexctl"]="$DOTFILES/scripts/thexctl/thexctl.sh"
-    ["wallchanger"]="$DOTFILES/dotconfig/hypr/scripts/ThemeSwitcher/wallchanger.sh"
-)
-
-for bin_name in "${!BIN_LINKS[@]}"; do
-    target="${BIN_LINKS[$bin_name]}"
-    if [ -e "$target" ]; then
-        ln -sfn "$target" "$DOTFILES/dotlocal/bin/$bin_name"
-    fi
-done
-
 # Ensure all shell scripts and custom binaries have executable permissions
 msg "Setting executable permissions on scripts and binaries..."
 find "$DOTFILES/scripts" "$DOTFILES/dotconfig/hypr/scripts" -type f -name "*.sh" -exec chmod +x {} + 2>/dev/null || true
@@ -259,6 +264,7 @@ find "$DOTFILES/dotlocal/bin" -maxdepth 1 -type f -exec chmod +x {} + 2>/dev/nul
 [ -f "$DOTFILES/.githooks/pre-push" ] && chmod +x "$DOTFILES/.githooks/pre-push"
 
 # Create the Noctalia setup marker so it does not launch the first-run wizard over the existing config
+mkdir -p "$DOTFILES/dotlocal/state/noctalia"
 touch "$DOTFILES/dotlocal/state/noctalia/.setup-complete"
 
 # Seed a default theme state if none exists so themeswitcher/wallchanger work on first launch
@@ -272,7 +278,7 @@ setup_gpu_udev_rules() {
     local igpu_pci=""
     local dgpu_pci=""
 
-    for card in /sys/class/drm/card[0-9]; do
+    for card in "$SYS_DRM_DIR"/card[0-9]; do
         [ -e "$card/device/vendor" ] || continue
         local vendor
         vendor="$(cat "$card/device/vendor")"
@@ -289,13 +295,14 @@ setup_gpu_udev_rules() {
 
     if [ -n "$igpu_pci" ] && [ -n "$dgpu_pci" ]; then
         msg "Creating udev rules for /dev/dri/igpu ($igpu_pci) and /dev/dri/dgpu ($dgpu_pci)..."
-        sudo tee /etc/udev/rules.d/99-hypr-gpu.rules >/dev/null <<EOF
+        sudo mkdir -p "$UDEV_RULES_DIR"
+        sudo tee "$UDEV_RULES_DIR/99-hypr-gpu.rules" >/dev/null <<EOF
 KERNEL=="card*", KERNELS=="$igpu_pci", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", SYMLINK+="dri/igpu"
 KERNEL=="card*", KERNELS=="$dgpu_pci", SUBSYSTEM=="drm", SUBSYSTEMS=="pci", SYMLINK+="dri/dgpu"
 EOF
         sudo udevadm control --reload
         sudo udevadm trigger --subsystem-match=drm
-    elif [ -n "$igpu_pci" ]; then
+    elif [ -n "$igpu_pci" ] && [ -f "$DOTFILES/dotconfig/hypr/env.conf" ]; then
         warn "Only integrated GPU ($igpu_pci) found; commenting out AQ_DRM_DEVICES in env.conf so Hyprland starts cleanly."
         sed -i 's/^\s*env\s*=\s*AQ_DRM_DEVICES/# env = AQ_DRM_DEVICES/' "$DOTFILES/dotconfig/hypr/env.conf"
     fi
@@ -316,7 +323,7 @@ if [ -d "$DOTFILES/.git" ] && [ -d "$DOTFILES/.githooks" ]; then
     git -C "$DOTFILES" config core.hooksPath .githooks
 fi
 
-# Enable essential system services for networking, bluetooth, power management, and audio
+# Enable essential system services for networking, bluetooth, and power management
 msg "Enabling system services..."
 for svc in NetworkManager bluetooth power-profiles-daemon; do
     if systemctl list-unit-files "${svc}.service" &>/dev/null; then
@@ -334,9 +341,9 @@ if command -v xdg-user-dirs-update &>/dev/null; then
 fi
 
 # Change default login shell to zsh if not already set
-if command -v zsh &>/dev/null && [ "$SHELL" != "$(command -v zsh)" ]; then
+if command -v zsh &>/dev/null && [ "${SHELL:-}" != "$(command -v zsh)" ]; then
     msg "Changing default shell to zsh..."
-    chsh -s "$(command -v zsh)" "$USER" || warn "Could not change shell automatically; run: chsh -s $(command -v zsh)"
+    chsh -s "$(command -v zsh)" "${USER:-$(id -un)}" || warn "Could not change shell automatically; run: chsh -s $(command -v zsh)"
 fi
 
 if [ -d "$BACKUP_DIR" ]; then
