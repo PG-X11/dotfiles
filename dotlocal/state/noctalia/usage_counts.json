@@ -1,0 +1,15 @@
+{
+  "Applications": {
+    "/home/a7med/.local/share/applications/appimagekit_0ad53c96ba0e937445e6bd5277a9d90e-qBittorrent.desktop": 5,
+    "/home/a7med/.local/share/applications/gparted.desktop": 1,
+    "/usr/share/applications/appimagelaunchersettings.desktop": 6,
+    "/usr/share/applications/com.github.wwmm.easyeffects.desktop": 9,
+    "/usr/share/applications/com.obsproject.Studio.desktop": 13,
+    "/usr/share/applications/librewolf.desktop": 1,
+    "/usr/share/applications/loaf.desktop": 1,
+    "/usr/share/applications/org.gnome.SoundRecorder.desktop": 2,
+    "/usr/share/applications/org.prismlauncher.PrismLauncher.desktop": 41,
+    "/usr/share/applications/org.pulseaudio.pavucontrol.desktop": 6,
+    "/usr/share/applications/steam.desktop": 7
+  }
+}

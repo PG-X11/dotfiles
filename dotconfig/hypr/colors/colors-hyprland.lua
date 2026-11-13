@@ -1,0 +1,1 @@
+/home/a7med/.cache/wal/colors-hyprland.lua

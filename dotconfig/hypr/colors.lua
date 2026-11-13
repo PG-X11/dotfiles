@@ -1,0 +1,17 @@
+-- EVEFOREST HYPRLAND COLORS
+-- These variables hold the colors for your windows and borders.
+
+-- Background color (Dark earthy brown/grey)
+bg_color = "rgba(2b3339ff)"
+
+-- Foreground/Text color (Warm cream/white)
+fg_color = "rgba(d3c6aaff)"
+
+-- Accent color (Soft moss green)
+accent_color = "rgba(a6b465ff)"
+
+-- The color of the border around a window you are NOT using
+inactive_border = "rgba(323c41ff)"
+
+-- The color of the border around the window you are CURRENTLY using
+active_border = { colors = { "rgba(a6b465ff)", "rgba(869759ff)" }, angle = 45 }

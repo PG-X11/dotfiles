@@ -1,0 +1,12 @@
+local artapps = "^(krita|Darktable|Aseprite|blender|OpenTabletDriver.UX)$"
+
+---- Special workspace init
+hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("art"))
+hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:art" }))
+
+---- art apps to go there
+hl.window_rule({
+    name = "artapps",
+    match = { class = artapps },
+    workspace = "special:art",
+})
