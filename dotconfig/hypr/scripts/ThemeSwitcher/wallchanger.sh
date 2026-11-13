@@ -20,11 +20,9 @@ mkdir -p "$CACHE_DIR"
 
 [ -d "$WALL_DIR" ] || exit 1
 
-# -------------------------
+# --------------------------
 # INSTANT WALLPAPER MENU
-# -------------------------
-# Replaced 'find' with fast native bash globbing.
-# Missing thumbnails generate in the background so the menu never freezes.
+# --------------------------
 PICKED="$(
 for img in "$WALL_DIR"/*.{gif,png,jpg,jpeg,webp}; do
     name="$(basename "$img")"
@@ -33,7 +31,6 @@ for img in "$WALL_DIR"/*.{gif,png,jpg,jpeg,webp}; do
 
     # Check if thumbnail exists
     if [ ! -f "$out" ]; then
-        # Use fallback instantly so Rofi does not wait
         preview="$HOME/.local/share/fallback.png"
 
         # Generate the real thumbnail in the background for next time
@@ -52,7 +49,7 @@ for img in "$WALL_DIR"/*.{gif,png,jpg,jpeg,webp}; do
     fi
 
     echo -en "${name}\0icon\x1f${preview}\n"
-done | rofi -dmenu -config "/home/a7med/Bookmarks/hypr/scripts/ThemeSwitcher/wallchanger.rasi" -i -p "Pick Wallpaper"
+done | rofi -dmenu -config "$HOME/.config/hypr/scripts/ThemeSwitcher/wallchanger.rasi" -i -p "Pick Wallpaper"
 )"
 
 [ -z "${PICKED:-}" ] && exit 0
@@ -60,18 +57,17 @@ done | rofi -dmenu -config "/home/a7med/Bookmarks/hypr/scripts/ThemeSwitcher/wal
 FULL_PATH="$WALL_DIR/$PICKED"
 [ -f "$FULL_PATH" ] || exit 1
 
-# -------------------------
+# --------------------------
 # SYMLINK SYSTEM
-# -------------------------
+# --------------------------
 ln -sfn "$FULL_PATH" "$THEME_PATH/current_wallpaper"
 ln -sfn "$FULL_PATH" "$THEME_PATH/.preview.png"
 
-# -------------------------
+# --------------------------
 # ASYNCHRONOUS PROCESSING
-# -------------------------
-# Send heavy tasks to the background so the script exits instantly
+# --------------------------
 if command -v wal >/dev/null 2>&1; then
-    wal -n -i "$FULL_PATH" -q &
+    (wal -n -i "$FULL_PATH" -q && hyprctl reload >/dev/null 2>&1) &
 fi
 
 if command -v noctalia >/dev/null 2>&1; then
@@ -85,10 +81,4 @@ if command -v awww >/dev/null 2>&1; then
         --transition-fps 120 &
 fi
 
-# Removed zed since its useless
-# Finally update noctalia
-if command -v noctalia >/dev/null 2>&1; then
-    noctalia msg wallpaper-set "$FULL_PATH" &
-    # noctalia msg color-scheme-set custom colors-noctalia
-fi
 exit 0
