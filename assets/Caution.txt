@@ -15,6 +15,7 @@ scripts that are AI made :
 - the installer for the dotfiles (sorry guys I am tired)
 - clipboard filter script
 - Converting hyprlang to lua and fixing some scripts
+- the FixforcePull.sh script
 these are all the AI vibe coded stuff in the dotfiles
 TO BE REPLACED
 BEGONE AI
